@@ -1,0 +1,553 @@
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width" initial-scale=>
+    <link rel="stylesheet" href="style.css">
+
+    <title></title>
+  </head>
+  <body style ="text-align:center;">
+    <p>
+      <h3><u>BINARY OPERATIONS</u></h3><br><br>
+      I believe that you have a good knowledge of <i><em>Set theory</em></i>.<br>
+       If not, you need to study <i><em>Set theory</em></i> to have a good understanding of <b>Binary Operations</b><br><br>
+       Let's begin with the definition of <b>Binary Operations</b><br><br>
+       A <i><em>Binary Operation </em></i> is any rule of combination of any two elements of a non-empty set.<br>
+       It is usually denoted by an asterisk or small circle( \( *  \) or \( \circ \) )<br><br>
+       A <i><em>Binary Operation </em></i> \( * \) on a non-empty set \( X \)  is a function <br><br>
+       \( * : X \times X \to X \)<br><br>
+       That is, a <b>binary operation </b> is a rule that combines two elements <br>
+       of a set to produce another element in the same set.<br><br>
+       For example, in the set of integers \( \mathbb{Z} \) , Addition, Subtraction, and Multiplication are binary operations on \( \mathbb{Z} \)<br><br>
+      Note : From the definition of Binary operations, we see that the set on which a binary operation is defined <b>must be non-empty</b>.<br><br>
+    </p>
+    <br>
+    <p>
+      <h4><u>Properties Of Binary Operations</u></h4><br><br>
+       (1) <b><u>CLOSURE PROPERTY</u></b> : A non-empty set \( X \) is said to be closed under a binary operation \( * \) if for all \( x,y \in X , x * y \in X \)<br><br>
+       That is, if we combine any two elements in the set with the rule of the binary operation, the result must also be an element in that set.<br><br>
+       For example, we already mentioned above that \( \mathbb{Z} \) is closed under Addition, Subtraction, and Multiplication. <br>
+       But what about Division? Let's take a look at the example below <br><br>
+       Consider the set of integers \( \mathbb{Z} \)<br>
+       Let \( 5,8 \in \mathbb{Z} \) <br>
+       Addition : \( 5 + 8 = 13 \in \mathbb{Z} \)<br>
+       Subtraction: \( 5-8 = -3 \in \mathbb{Z} \)<br>
+       Multiplication: \( 5 \times 8 = 40 \in \mathbb{Z} \)<br>
+       Division: \( \displaystyle{ {5 \over 8}  \notin \mathbb{Z} } \)<br><br>
+       This shows that \( \mathbb{Z} \) <em>is not closed under </em> Division. <br><br><br>
+       Consider the set of positive integers \( \mathbb{Z^+} \)<br>
+       Let \( 4,15 \in \mathbb{Z^+} \)<br>
+       Addition : \( 4 + 15 = 19 \in \mathbb{Z^+} \)<br>
+       Subtraction: \( 4-15 = -11 \notin \mathbb{Z^+} \)<br>
+       Multiplication: \( 4 \times 15 = 60 \in \mathbb{Z^+} \)<br>
+       Division: \( \displaystyle{ {4 \over 15}  \notin \mathbb{Z^+} } \)<br><br>
+       This shows that \( \mathbb{Z^+} \) <em>is not closed under </em>Subtraction and  Division. <br><br><br>
+       (2)<b><u>COMMUTATIVE PROPERTY</u></b> : Let \( X \) be a non-empty set which is closed under a binary operation \( * \).<br>
+       If for all \( x,y \in X \)<br>
+       \( x * y = y * x \), then the  binary operation \( * \) is said to be commutatiive.<br><br>
+       That is, if the order of combination of any two elements of the set is immaterial, then \( * \) is commutative <br><br><br>
+       (3)<b><u>ASSOCIATIVE PROPERTY</u></b> : Let \( * \) be a binary operation on a non-empty set \( X \). <br>
+       Suppose \( X \) is closed and commtative under \( * \). That is <br>
+       for all \( x,y \in X, x*y \in X \) and \( x*y = y*x \). Then \( * \) is said to be associative if <br>]
+       for all \( x,y,z \in X , (x*y)*z = x*(y*z) \)<br><br>
+       This means that, if we first combine two elements of \( X \), it gives <br>
+        us an element in \( X \) which we can also combine with another element <br>
+         in \( X \) to  give us an element in \( X \)<br>
+         Consider the example below <br><br>
+         Let \( 3,5,9 \in \mathbb{Z^+}\)<br>
+         Addition : \( (3+5)+9 = 8+9 =17 \) , also \( 3+(5+9) = 3+14 = 17 \)<br>
+         We see that \( (3+5)+9 = 3+(5+9) \), so it is associative <br><br>
+         Multiplication : \( 3*(5*9)=3*45=135 \) , also \( (3*5)*9 = 15*9 = 135 \)<br>
+         We see that \( 3*(5*9) = (3*5)*9 \), so it is associative <br><br><br>
+         (4)<b><u>DISTRIBUTIVE PROPERTY</u></b> : Let two binary operations ( say \( * , \circ \) )be defined on a non-empty set \( X \) , and <br>
+         the set \( X \) is closed under the two binary operations. If for all \( x,y,z \in X \), <br>
+         \( \displaystyle{x*(y \circ z) = (x*y) \circ (x*z)}\) , then the operation \( * \) is said <br>
+          to be <i>left-distributive</i> over the operation \( \circ \).<br>
+          If \( \displaystyle{(y \circ z)*x = (y*x) \circ (z*x)}\), then the operation \( * \) is said <br>
+          to be <i>right-distributive </i> over \( \circ \). <br><br>
+          For example <br>
+          \( \displaystyle{2*(3+4) = 2*7 = 14}\) , also \( \displaystyle{(2*3)+(2*4) = 6+8 = 4}\) <br>
+          We see that \( \displaystyle{2*(3+4) = (2*3)+(2*4)}\) , so \( * \) is distributive over \( + \) here. <br><br><br>
+          (5)<b><u>IDENTITY ELEMENT</u></b> : Let \( X \) be a non-empty set, and let \( * \) be a binary operation on \( X \) such that <br>
+          (i) \( X \) is closed under \( * \)<br>
+          (ii) The operation \( * \) is commutative <br>
+          Then, an element \( e\in X \) is called an identity element <br>
+           in \( X \) under the operation \( * \) if for all \( x \in X \),<br>
+          \( \displaystyle{ x*e = e*x = x}\) <br><br>
+          If such element \( e \) exist in \( X \), it is always unique. That is, there can be only one identity element. <br><br>
+          For example, in the set of positive integers \( \mathbb{Z^+}, 1 \) is the identity element under multiplication. <br><br>
+          Check : \( 5*1 = 1*5 =5 \)<br>
+          \( 100*1 =1*100 =100\) <br>
+          \( 29*1 = 1*29 = 29\) <br><br><br>
+          (6)<b><u>INVERSE ELEMENT</u></b> :  Let \( X \) be a non-empty set, and let \( * \) be a binary operation on \( X \) such that <br>
+          (i) \( X \) is closed under \( * \)<br>
+          (ii) The operation \( * \) is commutative <br>
+          (iii) There exist an identity element \( e \in X \) under the operation \( * \) <br>
+          Then, an element \( y\in X \) is called the inverse of an element \( x \in X \) if  <br>
+          \( \displaystyle{x*y = y*x = e}\)<br><br>
+          Note:The inverse of an element is always unique <br><br><br>
+
+    </p>
+    <br>
+    <p>
+      <h4><u>EXAMPLES</u></h4><br><br>
+      (1) The Opertion \( * \) is defined over \( \mathbb{R} \) the set of real numbers by $$\displaystyle{p*q=p+q-{\frac{1}{2}pq}}$$
+      (a) Show that \( * \) is commutative andassociative. <br>
+      (b) Find the identity element for the operation \( * \) <br>
+      (c) Find the inverse(under \( * \) ) for the real number \( p \), stating <br>
+       any value of \( p \) for which no inverse exists. <br>
+       (d) Determine whether or not $$\displaystyle{p*(q+r)=(p*q)+(p*r)}$$
+       <br>
+      <b><u>SOLUTION</u></b> <br><br>
+      Since \( * \) is defined by $$\displaystyle{p*q=p+q-{\frac{1}{2}pq}}$$<br>
+      (a)(i)Recall that if a binary operation \( * \) is commutative, then <br>
+       for any two elements in the set, \( a*b = b*a \). <br><br>
+       Now to show that \( * \) is commutative over \( \mathbb{R} \), we need <br>
+      to show that for any \( p,q \in \mathbb{R} , p*q = q*p \)<br><br>
+       Let \( p,q \in \mathbb{R} \) <br>
+       Now $$\displaystyle{p*q=p+q-{\frac{1}{2}pq}}$$
+       Also $$\displaystyle{q*p=q+p-{\frac{1}{2}qp} = p+q-{\frac{1}{2}pq} = p*q}$$
+       Hence, \( * \) is commutative. <br><br>
+       (a)(ii) Recall that if a binary operation \( * \) is associative, then <br>
+        for any three elements in the set, \( (a*b)*c = a*(b*c) \). <br><br>
+        Now to show that \( * \) is associstive over \( \mathbb{R} \), we need <br>
+       to show that for any  \( p,q,r \in \mathbb{R} , (p*q)*r = p*(q*r) \)<br><br>
+       Now, Let \( p,q,r \in \mathbb{R} \). Then $$\displaystyle{(p*q)*r = {\left[p+q-{\frac{1}{2}pq}\right]*r} }$$
+       $$\displaystyle{\implies \left[p+q-{\frac{1}{2}pq}\right]+r -{\frac{1}{2}\left[p+q-{\frac{1}{2}pq}\right]r}}$$
+       $$\displaystyle{\implies p+q-{1 \over 2}pq+r-{1 \over 2}\left[pr+qr-{1 \over 2}pqr\right]}$$
+       $$\displaystyle{\implies p+q+r-{1 \over 2}pq-{1 \over 2}pr-{1 \over 2}qr+{1 \over 4}pqr}$$
+       $$\displaystyle{\implies p+q+r-{1 \over 2}(pq+pr+qr)+{1 \over 4}pqr}$$
+
+       Now <br>
+       $$\displaystyle{p*(q*r) = p*\left[q+r-{1 \over 2}qr\right]}$$
+       $$\displaystyle{\implies {p+\left[q+r-{1 \over 2}qr\right]-{1 \over 2}p\left[q+r-{1 \over 2}qr\right]}}$$
+       $$\displaystyle{\implies {p+q+r-{1 \over 2}qr - {1 \over 2}\left[pq+pr-{1 \over 2}pqr\right]}}$$
+       $$\displaystyle{\implies{p+q+r-{1 \over 2}qr-{1 \over 2}pq-{1 \over 2}pr+{1 \over 4}pqr}}$$
+       $$\displaystyle{\implies{p+q+r-{1 \over 2}(pq+pr+qr)+{1 \over 4}pqr}}$$
+       We see that \( (p*q)*r = p*(q*r) \)<br>
+       Hence \( * \) is associative over \( \mathbb{R} \)<br><br>
+       (b)To find the identity element for the operation \( * \) , we need to find an element \( e \in \mathbb{R} \) such that \(  \forall x \in \mathbb{R} \) <br>
+       $$ x*e = e*x = x$$
+       Now, $$x*e = x+e-{\frac{1}{2}xe}$$
+       The only value of \( e \) that satisfy <br>
+       \( \displaystyle{x+e-{\frac{1}{2}xe} = x } \) is \( e=0 \) <br><br>
+       Hence, the identity element for the operation \( * \) is \( e = 0 \) <br><br>
+       (c) To find the inverse of the real number \( p \), we need to find \( q \in \mathbb{R} \) such that $$\displaystyle{p*q=q*p = 0}$$ since the identity element is \( e=0 \)<br><br>
+       Now, $$\displaystyle{p*q=p+q-{1 \over 2}pq}$$ so we need to find \( q \ni\) <br> \( \displaystyle{p+q-{1 \over 2}pq = 0}\)<br><br>
+       We try to make \( q \) the subject of formula $$\displaystyle{p+q-{1 \over 2}pq = 0}$$
+       $$\displaystyle{q-{1 \over 2}pq = -p}$$
+       $$\displaystyle{q(1-{1 \over 2}p) = -p}$$
+       $$\displaystyle{q= -\frac{p}{1 - {1 \over 2 }p}}$$
+       Simplifying further <br><br>
+       \( \displaystyle{q= {\frac{-2p}{2-p}}}\)<br><br>
+       The only value of \(p \) which no inverst will exist is the  <br><br>
+       number \( p \) such that, the denominator \( 2-p =0 \) <br><br>
+       That is if \( p = 2 \), then the inverse does not exist<br><br><br>
+       (d) To determine whether \( \displaystyle{{p*(q+r)}={(p*q)+(p*r)}}\) <br>
+       We prove the two sides to be equal or not <br><br>
+       $$\displaystyle{p*(q+r) = p+(q+r)-{1 \over 2}p(q+r)}$$
+       $$\displaystyle{\implies {p+q+r-{1 \over 2}pq-{1 \over 2}pr}}$$
+       Also $$\displaystyle{(p*q)+(p*r) = (p+q-{1 \over 2}pq)+(p+r-{1 \over 2}pr)}$$
+       $$\displaystyle{\implies{2p+q+r-{1 \over 2}pq-{1 \over 2}pr}}$$
+       Hence, \( \displaystyle{p*(q+r) \ne (p*q)+(p*r)}\)<br><br><br>
+
+    </p>
+    <br>
+    <p>
+      (2) Let \( X \) be a non-empty set with associative binary operation \( \circ \). Let \( x,y,z \in X \).<br><br>
+       Suppose \( x \) commutes with \(y \) and \( z \), show that \( x \) also commutes with \( y \circ z \)<br><br><br>
+       <b><u>Soluton</u></b><br><br>
+       Let \( x,y,z \in X \). since \( x \) <b>commutes</b> with \( y \) and \( z \),from the commutative property, we have that <br>
+       \( \displaystyle{x \circ y  = y \circ x }\) <br>
+       Also <br>
+       \( \displaystyle{x \circ z  = z \circ x }\) <br><br>
+       Now, we need to show that \( x \) commutes with \(y \circ z\)<br><br>
+       That is, \( \displaystyle{x \circ (y \circ z) = (y \circ z) \circ x}\) <br><br>
+       Now, <br>
+       \( \displaystyle{x \circ(y \circ z) = (x \circ y) \circ z}\) (Since \( \circ \) is <b>associative</b>) <br><br>
+       \( \displaystyle{\implies {(y \circ x) \circ z}}\) <br><br>
+       \( \displaystyle{\implies{y \circ (x \circ z)}}\)<br><br>
+       \( \displaystyle{\implies{y \circ (z \circ x)}}\)<br><br>
+       \( \displaystyle{\implies{(y \circ z) \circ x}}\)<br><br>
+       Hence, \( x \) commutes with \( y \circ z \)since we are able to show that \( \displaystyle{x \circ (y \circ z) = (y \circ z) \circ x}\) <br><br><br>
+    </p>
+    <br>
+    <p>
+      (3) A binary operation \( * \) is defined over the set of \( \mathbb{R} \)of real numbers by <br><br>
+      \( \displaystyle{x*y = x+y-x^2y  ,  \forall x,y \in \mathbb{R}}\) <br><br>
+      (a) Determine whether or not \( * \) is commutative and sccociative.<br>
+      (b) Evaluate : <br><br>
+      (i) \( 2 * 3 \) <br><br>
+      (ii) \( -5*4 \) <br><br>
+      (iii) \( 3*(4*5) \)<br><br>
+      (c)Find the values(s) of \( x \) for which : <br><br>
+      (i) \( 4*x=34 \) <br><br>
+      (ii) \( (3*x)+(x*3) = 8 \) <br><br><br>
+      <b><u>SOLUTION</u></b><br><br>
+      The operation is defined by : <br><br>
+      \( \displaystyle{x*y = x+y-x^2y  ,  \forall x,y \in \mathbb{R}}\) <br><br>
+      (a) To know if \( * \) is commutative, we check if  <br><br>
+      \( \displaystyle{x*y=y*x , \forall x,y \in \mathbb{R}}\)<br><br>
+      Now, <br><br>
+      \( \displaystyle{x*y=x+y-x^2y}\)<br><br>
+      \( \displaystyle{y*x=y+x-y^2x = x+y-xy^2}\)<br><br>
+      Since the result is not the same, we conclude that \( * \) is not commutative. <br><br><br>
+      To know if \( * \) is associative, we check if <br><br>
+      \( \displaystyle{x*(y*z)=(x*y)*z , \forall x,y,z \in \mathbb{R}}\)<br><br>
+      Now, <br><br>
+      \( \displaystyle{x*(y*z) = x*(y+z-y^2z)}\)<br><br>
+      \( \displaystyle{\implies {x+(y+z-y^2z)-x^2(y+z-y^2z)}}\)<br><br>
+      \( \displaystyle{\implies {x+y+z-y^2z-x^2y-x^2z+x^2y^2z}}\) <br><br>
+      Also <br><br>
+      \( \displaystyle{(x*y)*z = (x+y-x^2y)*z}\) <br><br>
+      \( \displaystyle{\implies{(x+y-x^2y)+z-(x+y-x^2y)^2z}}\) <br><br>
+      \( \displaystyle{\implies{x+y+z-x^2y-z(x^2+2xy+y^2-2x^3y-2x^2y^2+x^4y^2)}}\)<br><br>
+      \( \displaystyle{\implies {x+y+z-x^2y-x^2z-y^2z-2xyz+2x^2y^2z+2x^3yz-x^4y^2z}}\)<br><br>
+      Since we don't have the same result, we conclude that \( * \) is not associative <br><br>
+      Hence, \( * \) is neither associative nor commutative. <br><br><br>
+      (b) (i) \( \displaystyle{{2*3}= {2+3-{(2)^2 \times 3}}}\)<br><br>
+      \( \displaystyle{\implies {5-(4 \times 3)} ={5-12} ={-7}}\)<br><br><br>
+      (ii) \( \displaystyle{-5*4 ={-5+4-{(-5)^2 \times 4}}}\) <br><br>
+      \( \displaystyle{\implies{-1-(25 \times 4)} = {-1-100} = {-101}}\)<br><br><br>
+      (iii) \( \displaystyle{3*(4*5) ={3*[4+5-{(4)^2 \times 5}]}}\)<br><br>
+      \( \displaystyle{\implies {3*[9-(16 \times 5)]}}\)<br><br>
+      \( \displaystyle{\implies {3*[9-80]}}\)<br><br>
+      \( \displaystyle{\implies {3*{-71}}}\)<br><br>
+      \( \displaystyle{\implies{3+(-71)-{(3)^2 \times (-71)}}}\)<br><br>
+      \( \displaystyle{\implies {3-71-(9 \times {-71})}}\)<br><br>
+      \( \displaystyle{\implies{3-71+639 =571}}\)<br><br><br>
+      (c) (i) \( \displaystyle{4*x = {4+x-(4)^2x}}\)<br><br>
+      \( \displaystyle{={4+x-16x}}\)<br><br>
+      \( \displaystyle{\implies {4*x = {4-15x}}}\)<br><br>
+      Since we are told that \( \displaystyle{4*x = 34}\), we have that <br><br>
+      \( \displaystyle{4-15x = 34}\)<br><br>
+      \( \displaystyle{\implies {15x = 4-34}}\)<br><br>
+      \( \displaystyle{\implies{15x = {-30}}}\)<br><br>
+      \( \displaystyle{\implies {x={{-30} \over 15}}}\)<br><br>
+      \( \displaystyle{\implies{ x = {-2}}}\)<br><br><br>
+      (ii) \( \displaystyle{(3*x)+(x*3)}\)<br><br>
+      \( \displaystyle{\implies{[3+x-9x]+[x+3-3x^2]}}\) <br><br>
+      \( \displaystyle{\implies {3+x-9x+x+3-3x^2}}\)<br><br>
+      \( \displaystyle{\implies{-3x^2-7x+6}}\)<br><br>
+      Given that \( \displaystyle{(3*x)+(x*3) =8}\), we have that <br><br>
+      \( \displaystyle{-3x^2-7x+6=8}\) <br><br>
+      \( \displaystyle{\implies{3x^2+7x+2 = 0}}\) <br><br>
+      factorizing, we have <br><br>
+      \( \displaystyle{(x+2)(3x+1) = 0}\)<br><br>
+      \( \displaystyle{\implies{{x+2 = 0}}}\) or \( \displaystyle{3x+1=0}\)<br><br>
+      \( \displaystyle{\implies {x= {-2}}}\) or \( \displaystyle{x={- \frac{1}{3}}}\) <br><br><br>
+
+    </p>
+     <br>
+     <p>
+       (4) The function \( f \) is defined by $$\displaystyle{f(x) = 3x-2 , x \in \mathbb{R}}$$
+       (a) The binary operation \( \circ \) onthe set \( \displaystyle{\mathbb{R}}\) is such that
+       $$\displaystyle{f(p \circ q) = f(p) \times f(q), \forall p,q \in \mathbb{R}}$$
+       (i) Show that \( \displaystyle{ p\circ q = {3pq-2p-2q+2}}\)<br><br>
+       (ii) Show that \( \displaystyle{ \circ }\) is commutative and associative <br><br>
+       (iii) Find the identity element for the operation <br><br>
+       (iv) Find the inverse( under \( \circ \) ) of the real number \( p \) , stating any value of \( p \) for which no inverse exists. <br><br>
+     </p>
+     <br>
+     <p>
+        <u><b>SOLUTON</b></u> <br><br>
+        The function is defined by $$ f(x) = 3x-2 , x \in \mathbb{R}$$
+        (a) \( f(p \circ q) = f(p) \times f(q) , \forall p,q \in \mathbb{R} \) <br><br>
+        (i) To show that  \( p \circ q = 3pq-2p-2q+2 \) <br><br>
+        We find  \(  f(p \circ q) \). <br><br>
+        Since \( f(p) = 3p-2 \), \( f(q) = 3q-2 \) <br><br>
+        \( f(p \circ q) = (3p-2) \times (3q-2) \)<br><br>
+        \( \implies 9pq-6p-6q+4 \) <br><br>
+        \( f(p \circ q) = 9pq-6p-6q+4 \) <br><br>
+        \( \implies 3(3pq-2) - 2(3p-2) - 2(3q-2) +2 \) <br><br>
+        <u><b>NOTE :</b></u> We make it appear in the form \( f(x) = 3x-2 \) <br><br>
+        This means that \( f(pq) = 3pq-2 \) , ... <br><br>
+        So we have <br><br>
+        \( f(p \circ q) = 3(3pq-2) - 2(3p-2) -2(3q-2) + 2 \) <br><br>
+        Now, we take \( f^{-1} \) on bothe sides ( \(f\) inverse).
+        Since \( f(x) = 3x - 2 \), then taking inverse on both sides <br><br>
+        \( f^{-1}[f(x)] = f^{-1}(3x-2)    \implies f^{-1}(3x-2) = x \) <br><br>
+        Now, back to our equation, taking inverse on both sides, we have <br><br>
+        \(  f^{-1}[f(p \circ q)] = f^{-1}[3(3pq-2) -2(3p-2)-2(3q-2)+2 ]  \) <br><br>
+        So, we have <br><br>
+        \( {p \circ q} = 3f^{-1}(3pq-2) -2f^{-1}(3p-2) -2f^{-1}(3q-2)+2  \) <br><br>
+        Recall that \( f^{-1}(3x-2) = x \) <br><br>
+        Therefore, we have <br><br>
+        \( {p \circ q} = 3(pq) -2(p) -2 (q) +2  \)<br><br>
+        \( \implies {p \circ q} = {3pq-2p-2q+2}  \) <br><br><br>
+        (ii) To show that \( \circ \) is commutative, we need to show that <br><br>
+        $$ {p \circ q} = {q \circ p}  \forall p,q \in \mathbb{R}$$
+        Now, \( {p \circ q} = 3pq-2p-2q+2 \) <br><br>
+        \( \implies {3qp-2q-2p+2} = {q \circ p} \) <br><br>
+        Hence, \( \circ \) is commutative. <br><br>
+        To show that \( \circ \) is associative, we need to show that <br><br>
+        \( \displaystyle{ {p \circ ( q \circ r)} = {(p \circ q) \circ r} } \), \( \forall  p,q,r \in \mathbb{R} \). <br><br>
+        Now,  <br><br>
+        \( \displaystyle{ {p\circ (q \circ r)} = {p \circ (3qr-2q-2r+2)} }\)<br><br>
+        \( \displaystyle{\implies 3p(3qr-2q-2r+2) -2p -2(3qr-2q-2r+2)+2} \) <br><br>
+        \( \displaystyle{ \implies {9pqr-6pq-6pr+6p-2p-6qr+4q+4r-4+2}} \)<br><br>
+        \( \displaystyle{ \implies {9pqr-6pq-6qr-6pr+4p+4q+4r-2}} \)<br><br>
+        \(  \displaystyle{ \implies {9pqr-6(pq+pr+qr)+4(p+q+r)-2}} \)<br><br>
+        \( \displaystyle{ \therefore  {p\circ (q \circ r)} \implies {9pqr-6(pq+pr+qr)+4(p+q+r)-2} } \) <br><br>
+        Now, we consider \( {(p \circ q) \circ r} \) <br><br>
+        \( \displaystyle{{(p \circ q) \circ r} = {(3pq-2p-2q+2) \circ r}  } \) <br><br>
+        \( \implies \displaystyle{3r(3pq-2p-2q+2) -2(3pq-2p-2q+2)-2r+2} \)<br><br>
+        \( \implies \displaystyle{9pqr-6pr-6qr+6r-6pq+4p+4q-4-2r+2} \)<br><br>
+        \( \implies \displaystyle{9pqr-6pr-6qr-6pq+4p+4q+4r-2} \)<br><br>
+        \(  \displaystyle{ \implies {9pqr-6(pq+pr+qr)+4(p+q+r)-2}} \)<br><br>
+        \( \displaystyle{ \therefore  {(p \circ q) \circ r} \implies {9pqr-6(pq+pr+qr)+4(p+q+r)-2} } \) <br><br>
+        \( \displaystyle{ \implies {p \circ ( q \circ r)} = {(p \circ q) \circ r} } \) <br><br>
+        It follows that \( \circ \) is associative. <br><br>
+        Hence, \( \circ \) is commutative and associative. <br><br><br>
+        (iii) To find the identity element under the operation \( \circ \) <br><br>
+        We need to find \( x \in \mathbb{R} \) such that, for all \( p \in \mathbb{R} \)<br><br>
+        \( {p \circ x}= {x \circ p} =p \) <br><br>
+        Now
+        \( {p \circ x} = {3px-2p-2x+2}  \) <br><br>
+        We need to find \( x \) such that <br><br>
+        \( {3px-2p-2x+2} = p \) <br><br>
+        We try to make \( x \) the subject of formula <br><br>
+        \( \displaystyle{ {3px-2x} = 2p+p-2 }\)<br><br>
+        \( \displaystyle {3px-2x = 3p-2} \)<br><br>
+        \( \displaystyle {x(3p-2) = 3p-2} \)<br><br>
+        \( \displaystyle {x= \frac{3p-2}{3p-2} = 1} \)<br><br>
+         Therefore, the identity element under \( \circ \) is \( 1 \)<br><br><br>
+         (iv) To find the inverse of a real number \( p \), we need to find an element \( q  \in \mathbb{R}\) such that <br><br>
+         \( \displaystyle { {p \circ q} = {q \circ p} = 1 } \)<br><br>
+         Now, since \( \displaystyle { {p\circ q} = {3pq-2p-2q+2}} \)<br><br>
+         We have that <br><br>
+         \( \displaystyle {3pq-2p-2q+2 = 1} \)<br><br>
+         \( \displaystyle {3pq-2q = 2p+1-2} \)<br><br>
+         \( \displaystyle {3pq-2q =2p-1} \)<br><br>
+         \( \displaystyle {q(3p-2) = 2p-1} \)<br><br>
+         \( \displaystyle {q = \frac{2p-1}{3p-2}} \)<br><br>
+         Therefore, the inverse of any real number \( p \in \mathbb{R} \) is \( \displaystyle{ \frac{2p-1}{3p-2} }\) <br><br>
+         If \( \displaystyle{ p = {2 \over 3} }\), then it's inverse does not exist. <br><br>
+     </p>
+     <br>
+     <p>
+       (5) For any two subsets \( X \) and \( y \) of a universal set \( \mathbb{Z} \), the operation \( \circ \) is defined by <br><br>
+       \( \displaystyle{ X \circ Y = {(X \cap Y') \cup (Y \cap X')}} \) <br><br>
+       Where \( X' , Y' \) denote the complements of X and Y respectively <br><br>
+       Show that <br><br>
+       (a) the operation is commutative ; <br><br>
+       (b) the empty set \( \emptyset \) is the identity element for \( \circ \) ; <br><br>
+       (c) every element is its own inverse. <br><br>
+       <br>
+        <b><u>Solution</u></b> <br><br>
+        Since the operation is defined by <br><br>
+        \( X \circ Y = {(X \cap Y') \cup (Y \cap X')} \) <br><br>
+        (a) To show that the operation is commutative, we need to show that \( \displaystyle{X \circ Y= Y \circ X} \) <br><br>
+        Now, <br><br>
+        \( \displaystyle{X \circ Y = {(X \cap Y') \cup (Y \cap X')}} \) <br><br>
+        \( \displaystyle{\implies {(Y \cap X') \cup (X \cap Y')} } \) (commutative property of set) <br><br>
+        \( \displaystyle{\implies { Y \circ X}} \) <br><br>
+        Hence, \( \circ \) is commutative. <br><br>
+        (b) To find the identity element for \( \circ \) , let \( \displaystyle{ X \subseteq Z} \), we <br><br>
+        need to find \( \displaystyle{Y \subseteq Z} \) such that  <br><br>
+        \( \displaystyle{X \circ Y  ={Y \circ X} = X } \) <br><br>
+        Now, <br><br>
+        \( \displaystyle{X \circ Y = X} \) <br><br>
+        \( \displaystyle{\implies {(X \cap Y') \cup (Y \cap X')} = X } \) <br><br>
+        \( \displaystyle{\implies {x \cap Y' = X}} \) <br><br>
+        This is possible if and only if \( \displaystyle{Y = \emptyset} \) , since <br><br>
+        \( \displaystyle{X \cap ( \emptyset)' = X \cap Z = X} \) <br><br>
+        \( \displaystyle{therefore \emptyset} \)  is the identity element for \( \circ \) <br><br>
+        (c) To find the inverse of every element, let \( X \subseteq Z \), we find \( Y \subseteq Z \) such that <br><br>
+        \( \displaystyle{X \circ Y =Y \circ X = \emptyset} \) <br><br>
+        Now, we have <br><br>
+        \( \displaystyle{X \circ Y = \emptyset} \) <br><br>
+        \( \displaystyle{\implies {(X  \cap Y') \cup (Y \cap X') = \emptyset}} \) <br><br>
+        \( \displaystyle{\implies {X \cap Y' = \emptyset}} \) and \( \displaystyle{Y \cap X' = \emptyset} \) <br><br>
+        This is possible if and only if <br><br>
+        \( \displaystyle{Y' = X'} \) and  \( \displaystyle{X' = Y'} \) <br><br>
+        \( \displaystyle{\implies {X = Y}} \) <br><br>
+        Check : <br><br>
+        \( \displaystyle{X \circ X = {(X \cap X') \cup ( X \cap X')}} \) <br><br>
+        \( \displaystyle{\implies{ \emptyset \cup \emptyset = \emptyset}} \) <br><br>
+        \( \therefore \) Ever element is its own inverse. <br><br><br>
+
+     </p>
+     <br>
+     <p>
+       (6)Find the identity element, if it exists, and the inverse of 5 when <br><br>
+       each of the following operations is defined on  \( \mathbb{R} \) the set of real numbers. <br><br>
+       (a)\( \displaystyle{p * q = p+q} \) <br><br>
+       (b)\( \displaystyle{p*q = pq} \) <br><br>
+       (c) \( \displaystyle{p*q = p+q+pq} \) <br><br>
+       (d) \( \displaystyle{p*q= pq+2p+2q} \) <br><br>
+       (e) \( \displaystyle{p*q = \sqrt{pq}} \) <br><br>
+       (f) \( \displaystyle{p*q = {p \over q}+{q \over p}} \) <br><br>
+       (g) \( \displaystyle{p*q = {p \over q} - p} \) <br><br>
+
+     </p>
+     <br>
+     <p>
+       <b><u>Solution</u></b> <br><br>
+       (a) \( * \) is defined by <br><br>
+       \( \displaystyle{p*q = p+q} ,\forall p,q \in \mathbb{R}\)  <br><br>
+       To find the identity element under \( * \), let \( p \in \mathbb{R} \), we find <br><br>
+       \( \displaystyle{q \in \mathbb{R}} \) such that <br><br>
+       \( \displaystyle{p * q = q*p = p} \) <br><br>
+       Now, we have that <br><br>
+       \( \displaystyle{p * q  = q*p = p} \) <br><br>
+       \( \displaystyle{\implies {p+q=p}} \) <br><br>
+       we make q the subject of formula <br><br>
+       \( \displaystyle{q = p-p = 0} \) <br><br>
+       \( \displaystyle{\therefore q = 0} \) <br><br>
+       The identity element \( =  0 \) <br><br>
+       To find the inverse of \( 5 \), we need <br><br>
+       to find \( r \in \mathbb{R}\) such that <br><br>
+       \( \displaystyle{5*q = q*5 =0} \) <br><br>
+       \( \displaystyle{\implies 5+q = 0} \) <br><br>
+       \( \displaystyle{\implies q = -5} \) <br><br>
+
+     </p>
+     <br>
+     <p>
+       (b) \( \displaystyle{p*q = pq } \), forall \( p,q \in \mathbb{R} \) <br><br>
+       To find the identity element, let \( p \in \mathbb{R} \), we need <br><br>
+       to find \( q \in \mathbb{R} \) such that <br><br>
+       \( \displaystyle{p*q =q*p = p} \) <br><br>
+       Now, \( \displaystyle{p*q = p} \) <br><br>
+       \( \displaystyle{\implies pq = p} \) <br><br>
+       We make \( q \) the subject of formula <br><br>
+       \( \displaystyle{q = {p \over p }= 1} \) <br><br>
+       \( \therefore \) the identity element \( = 1 \) <br><br>
+       To find the inverse of \( 5 \), we need <br><br>
+       to find \( q \in \mathbb{R}  \ni  \) <br><br>
+       \( \displaystyle{5*q = q*5 =1} \) <br><br>
+       \( \displaystyle{\implies 5q=1} \) <br><br>
+       \( \displaystyle{\implies q = {1 \over 5}} \) <br><br>
+       \( therefore\) the inverse of \( 5 \) is \( 1 \over 5 \) <br><br>
+     </p>
+     <br>
+     <p>
+       (c) \( \displaystyle{p*q = p+q+pq} \forall p,q \in \mathbb{R} \) <br><br>
+       To find the identity element under \( * \), let <br><br>
+       \( \displaystyle{p \in \mathbb{R}} \), we find \( q \in \mathbb{R} \) such that <br><br>
+       \( \displaystyle{p*q =q*p = p} \) <br><br>
+       Now,<br><br>
+       \( \displaystyle{p * q =p} \)
+       \( \displaystyle{\implies {p+q+pq = p}} \) <br><br>
+       we try to make \( q \) the subject of formula, we have <br><br>
+       \( \displaystyle{q+pq = p-p} \) <br><br>
+       \( \displaystyle{\implies q(1+p) = 0} \) <br><br>
+       \( \displaystyle{\implies q = 0} \) <br><br>
+       \( \therefore \) the identity element under \( *  = 0 \)  <br><br>
+       To find the inverse of \( 5 \), we need to find <br><br>
+       \( \displaystyle{q \in \mathbb{R}} \) such that <br><br>
+       \( \displaystyle{5*q = 0} \) <br><br>
+       \( \displaystyle{\implies 5+q+5q = 0} \) <br><br>
+       \( \displaystyle{\implies q+5q = -5} \) <br><br>
+       \( \displaystyle{\implies 6q = -5} \) <br><br>
+       \( \displaystyle{\implies q = - \frac{5}{6}} \) <br><br>
+       \( \therefore \) the inverse of \( \displaystyle{ 5 = - \frac{5}{6}} \) <br><br>
+     </p>
+     <br>
+     <p>
+       (d) \( \displaystyle{p * q = pq+2p+2q} \) for all \( p,q \in \mathbb{R} \) <br><br>
+       To find the identity element, let \( p \in \mathbb{R} \) <br><br>
+       we need to find \(q \in \mathbb{R} \ni \) <br><br>
+       \( \displaystyle{p*q = q*p = p} \) <br><br>
+       Now, we have <br><br>
+       \( \displaystyle{p*q = p} \) <br><br>
+       \( \displaystyle{\implies {pq+2p+2q =p}} \) <br><br>
+       we try to make \( q \) the subject of formula <br><br>
+       \( \displaystyle{\implies{pq+2q= p-2p}} \) <br><br>
+       \( \displaystyle{\implies q(p+2) = -p} \) <br><br>
+       \( \displaystyle{\implies {q = - \frac{p}{p+2}}} \) <br><br>
+       we notice that when \( p = 2 \), the denominator becomes zero, and for <br><br>
+        different values of \( p \), there will be different values of \( q \) <br><br>
+       \( \therefore \) the identity element does not exist since it is not unique. <br><br>
+       There is no real number satisfying this property . <br><br>
+     </p>
+     <br>
+     <p>
+       (e) \( \displaystyle{p*q = \sqrt{pq}} \) \( \forall p,q \in \mathbb{R}\) <br><br>
+       To find the identity element, let \( p \in \mathbb{R} \), we <br><br>
+       need to find \( \displaystyle{q \in \mathbb{R}} \) such that <br><br>
+       \( \displaystyle{p*q =q*p =p} \) <br><br>
+       now <br><br>
+       \( \displaystyle{p*q = p} \) <br><br>
+       \( \displaystyle{\implies{\sqrt{pq} = p}} \) <br><br>
+       squaring both sides <br> <br>
+       \( \displaystyle{pq = p^2} \) <br><br>
+       we make \( q \) the subject of formula <br><br>
+       \( \displaystyle{\implies{q= \frac{p^2}{p}}} \) <br><br>
+       \( \displaystyle{\implies{q = p}} \) <br><br>
+       Here, every element is an identity element, it is not unique. <br><br>
+       Hence, the identity element does not exist, and every element is its own inverse. <br><br>
+     </p>
+     <br>
+     <p>
+       (f)\( \displaystyle{p*q = \frac{p}{q} + \frac{q}{p}} \) for all \( p,q \in \mathbb{R} \) <br><br>
+       We need to find the identity element. <br><br>
+       let \( p \in \mathbb{R} \), we find \( q \in \mathbb{R} \ni \) <br><br>
+       \( \displaystyle{p*q= q*p = p} \) <br><br>
+       now, \( \displaystyle{p*q = p} \) <br><br>
+       \( \displaystyle{\implies{\frac{p}{q} + \frac{q}{p} = p}} \)<br><br>
+       \( \displaystyle{\implies {\frac{p^2+q^2}{pq} = p}} \) <br><br>
+       \( \displaystyle{\implies {p^2+q^2=p^2q} } \) <br><br>
+      \( \displaystyle{\implies{q^2-p^2q+p^2 = 0}} \) <br><br>
+      Using the quadratic formula <br><br>
+      \( \displaystyle{q = {\frac{p^2 \pm \sqrt{p^4-4p^2}}{2}}} \) <br><br>
+       This gives different valuesof \( q \) for different values of \( p \) <br><br>
+       Hence, the identity element does not exist. <br><br>
+     </p>
+     <br>
+     <p>
+       (g) \( \displaystyle{p*q = \frac{p}{q} - p} \) for all \( p,q \in \mathbb{R} \) <br><br>
+       To find the identity element, we need to find <br><br>
+       \( \displaystyle{q \in \mathbb{R}} \) such that, if \( p \in \mathbb{R} \), then <br><br>
+       \( \displaystyle{p*q = q*p = p} \) <br><br>
+       Now <br><br>
+       \( \displaystyle{p*q = p} \) <br><br>
+       \( \displaystyle{\implies{{p \over q}-p = p}} \) <br><br>
+       \( \displaystyle{\implies{{p \over q}= p+p}} \)<br><br>
+       \( \displaystyle{\implies{{p \over q}= 2p}} \) <br><br>
+       \( \displaystyle{\implies{p = 2pq}} \) <br><br>
+       We make \( q \) the subject of formula <br><br>
+       Dividing both sides by \( p \), we have <br><br>
+       \( \displaystyle{2q = 1} \)<br><br>
+       \( \displaystyle{\implies{q={1 \over 2}}} \) <br><br>
+       \( \therefore \) the identity element is \( {1 \over 2} \) <br><br>
+       To find the inverse of 5, we need to find \( q \in \mathbb{R} \ni \) <br><br>
+       \( \displaystyle{5*q = {1 \over 2}} \) <br><br>
+       Now <br><br>
+       \( \displaystyle{{5 \over q}-5={1 \over 2}} \) <br><br>
+       \( \displaystyle{{5 \over q}= {1 \over 2}+5} \) <br><br>
+       \( \displaystyle{{5 \over q }= {\frac{11}{5}}} \) <br><br>
+       \( \displaystyle{11q = 25} \) <br><br>
+       \( \displaystyle{q = \frac{25}{11}} \) <br><br>
+       \( \therefore \) the inverse of \( 5  = \frac{25}{11}\) <br><br><br>
+     </p>
+     <br>
+     <p>
+       <h3><u>Exercises</u></h3>
+       <br><br>
+       (1) Let \( S \) be the set of all ordered pairs \( \displaystyle{x=(x_1,x_2)} \) <br><br>
+       with \( x_1 \) and \( x_2 \) real numbers.<br><br>
+       A binary operation \( * \) is defined on \( S \) by <br><br>
+       \( \displaystyle{a*b = {(a_1b_1-a_2b_2,a_1b_2+a_2b_1)}} \) <br><br>
+       (a) Show that this operation is commutative and associative. <br><br>
+       (b) Determine the identity element for this operation, and also the inverse of any element \( x \). <br><br>
+       Hence solve : <br><br>
+       \( \displaystyle{a*x = b} \) <br><br>
+       where \( \displaystyle{a =(3,4), b=(5,6)} \). <br><br>
+       (2)Let \( X \) be a nonempty set with associative binary operation \( \circ \). <br><br>
+       If \( e \) and \( f \) are elements of \( X \) such that <br><br>
+       \( \displaystyle{x \circ e = x} \) and \( \displaystyle{f \circ x = x} \) for all \( \displaystyle{x \in X} \). <br><br>
+       Show that \( \displaystyle{e = f } \). Futhermore, if \( \displaystyle{x \circ y = e = z \circ x} \), <br><br>
+       show that \( \displaystyle{y = z} \). <br><br>
+     </p>
+  </body>
+</html>

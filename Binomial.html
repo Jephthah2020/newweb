@@ -1,0 +1,484 @@
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width" initial-scale=>
+    <link rel="stylesheet" href="style.css">
+
+    <title></title>
+  </head>
+  <body style ="text-align:center;">
+    <h2 style="text-align:center">BINOMIAL THEOREM</h2><br><br>
+    <p>
+      Recall <b>Pascal's triangle</b>
+    </p>
+    <br>
+    <pre><big>
+                         1
+                     1   2   1
+                  1    3   3   1
+                1    4   6   4   1
+              1    5   10  10   5  1
+            1    6   15  20   15  6   1
+                         etc
+    </big>
+  </pre><br>
+  <p>
+    We make use of these as coefficients when expanding brackets.<br>
+    For example, when  expanding \( (x+1)^2 \), we notice that <br><br>
+    \( {(x+1)^2} = {x^2+x+x+1} \)<br><br>
+    \( = {x^2+2x+1} \) <br><br>
+    We take note of the coefficients, it is in the form of <br>
+    <pre>         1   2    1</pre><br>
+    When expandig \( {(x+1)^3} \), we see that <br><br>
+    \( (x+1)^3 = {(x+1)(x+1)^2} \)<br><br>
+    \( = {(x+1)(x^2+2x+1)} \)<br><br>
+    \( = {x^3+2x^2+x+x^2+2x+1}  \)<br><br>
+    \( =  {x^3+3x^2+3x+1} \)<br><br>
+    Again, we notice that the coefficients is of the form <br>
+    <pre>         1   3    3  1</pre><br>
+    Normally, in any expansion, if we have <br>
+    \( {(x+y)^n}\), using <b>pascal's triangle</b> <br><br>
+    \( {(x+y)^n} = {a_0x^ny^0+a_1x^{n-1}y^1+a_2x^{n-2}y^2+...+} \)<br><br>
+    \( {a_{n-2}x^2y^{n-2}+a_{n-1}x^1y^{n-1}+a_nx^0y^n} \)<br><br>
+    Where \( {a_0,a_1,a_2,...,a_n} \) are constant coefficients that can be determined from <b>pascal's triangle</b> <br><br>
+    If \( n = 2\), then the coefficients are <pre>   1   2   1</pre><br>
+    If \( n = 3\), then the coefficients are <pre>   1   3   3   1</pre><br>
+    If \( n = 4\), then the coefficients are <pre>   1   4   6   4   1</pre><br>
+    If \( n = 5\), then the coefficients are <pre>   1   5   10   10   5   1</pre><br>
+    For example, let us expand \( {(x+y)^4} \) using <b>pascal's triangle</b><br>
+        Since \( n = 4 \), the coefficients <pre>   1   4   6   4   1</pre> will be used <br>
+    \( {(x+y)^4} =  {(1)x^4y^0+(4)x^3y^1+(6)x^2y^2+(4)x^1y^3+(1)x^0y^4}  \)<br><br>
+    \(=  {x^4+4x^3y+6x^2y^2+4xy^3+y^4} \)<br><br>
+    This makes  our work easier. If we go through normal expansion, we have <br><br>
+    \( {(x+y)^4} =  {{(x+y)^2}{(x+y)^2}}  \)<br><br>
+    \(  =  {(x^2+2xy+y^2)(x^2+2xy+y^2)} \) <br><br>
+    \(  =  {x^4+2x^3y+x^2y^2+2x^3y+4x^2y^2+2xy^3+x^2y^2+2xy^3+y^4} \)<br><br>
+    \(  =  {x^4+4x^3y+6x^2y^2+4xy^3+y^4}  \)<br><br>
+    This method also looks shorter, and we arrived at the same result. <br><br>
+    But if have cases where \( n > 10\), then the second method will be longer.<br>
+    So we go with the first method since it makes our work shorter.<br>
+  </p>
+  <br>
+  <p>
+    You don't need to memorize the <b>pascal's triangle</b>, and you don't need to put it down when expanding.<br>
+    There is a simple method you can use when expanding. We call it Combination method.<br><br>
+    If we are to expand \( {(x+y)^n} \), then <br><br>
+    \( {(x+y)^n}  =  { {}^{n}C_{0}x^ny^0+{}^{n}C_{1}x^{n-1}y^1+{}^{n}C_{2}x^{n-2}y^2+...+} \)<br><br>
+    \( {}^{n}C_{n-2}x^2y^{n-2}+{}^{n}C_{n-1}x^1y^{n-1}+{}^{n}C_{n}x^0y^n \)<br>
+  </p>
+  <br>
+  <p>
+    <u>Examples</u><br><br>
+    (1) Expand \( (2+x^2)^5 \)<br><br>
+    <u>Solution</u><br><br>
+    \( {(2+x^2)^5}  =  {{}^{5}C_{0}2^5(x^2)^0+{}^{5}C_{1}2^4(x^2)^1+{}^{5}C_{2}2^3(x^2)^2+{}^{5}C_{3}2^2(x^2)^3+{}^{5}C_{4}2^1(x^2)^4+{}^{5}C_{5}2^0(x^2)^5} \)<br><br>
+    \( = {{(1)(32)(1)}+{(5)(16)(x^6)}+{(10)(8)(x^4)}+{(10)(4)(x^6)}+{(5)(2)(x^8)}+{(1)(1)(x^{10})}} \)<br><br>
+    \( \therefore {(2+x^2)^5} = {32+80x^2+80x^4+40x^6+10x^8+x^{10}} \)<br>
+  </p>
+  <br>
+  <p>
+    (2) Expand \( {(2x-5y)^4} \) <br><br>
+    <u>Solution</u><br><br>
+    \( {(2x-5y)^4} =  {{^{4}C_{0}(2x)^4(-5y)^0}+{^{4}C_{1}(2x)^3(-5y)^1}+{^{4}C_{2}(2x)^2(-5y)^2}+{^{4}C_{3}(2x)^1(-5y)^3}+{^{4}C_{4}(2x)^0(-5y)^4}} \)<br><br>
+    \(  \implies  {{(1)(16x^4)(1)}+{(4)(8x^3)(-5y)}+{(6)(4x^2)(25y^2)}+{(4)(2x)(-125y^3)}+{(1)(1)(625y^4)}}  \)<br><br>
+    \(  {(2x-5y)^4}  =  {16x^4-160x^3y+600x^2y^2-1000xy^3+625y^4} \)<br>
+  </p>
+  <br>
+  <p>
+   (3) Expand  \( {(1-2x)^7}   \) <br><br>
+   <u>Solution</u><br><br>
+     \( {(1-2x)^7}  =  {{{}^{7}C_{0}(1)^7(-2x)^0}+{{}^{7}C_{1}(1)^6(-2x)^1}+{{}^{7}C_{2}(1)^5(-2x)^2} +} \)<br><br>
+     \( {{{}^{7}C_{3}(1)^4(-2x)^3}+{{}^{7}C_{4}(1)^3(-2x)^4}+{{}^{7}C_{5}(1)^2(-2x)^5}+{{}^{7}C_{6}(1)^1(-2x)^6}+{{}^{7}C_{7}(1)^0(-2x)^7}} \)<br><br>
+     \( \implies {{(1)(1)(1)}+{(7)(1)(-2x)}+{(21)(1)(4x^2)}+{(35)(1)(-8x^3)}+{(1)(35)(16x^4)}+{(21)(1)(-32x^5)}+{(7)(1)(64x^6)}+{(1)(1)(-128x^7)}} \)<br><br>
+     \( \therefore {(1-2x)^7} = {1-14x+84x^2-280x^3+560x^4-672x^5+448x^6-128x^7} \)<br><br>
+  </p>
+  <br>
+  <p>
+   <h3>Expansion of \( (a+x)^n \)</h3><br><br>
+   From the law of indices, we know that we can re-write \( (a+x)^n \) as <br><br>
+   \( {(a+x)^n}  =  {[a(1+{x \over a})]^n} = {a^n(1+{x \over a})^n} \)<br><br>
+   This is where <b>Binomial Theorem</b> comes in. <br>
+  </p>
+  <br>
+  <p>
+   <u> <h3>Binomial Expansion (When n is a positive integer)</h3> </u><br><br>
+   To expand \( {(1+x)^n} \)<br><br>
+   \( {(1+x)^n} = {{1}+{{}^{n}C_{1}x}+{{}^{n}C_{2}x^2}+{{}^{n}C_{3}x^3}+{{}^{n}C_{4}x^4}+...+{{}^{n}C_{n-1}x^{n-1}}+{{}^{n}C_{n}x^n}}\) <br><br>
+   That is <br><br>
+   \( {(1+x)^n} = {{1}+{{}^{n}C_{1}x}+{{}^{n}C_{2}x^2}+...+{{}^{n}C_{n-1}x^{n-1}}+{x^n}}\) <br><br>
+   Now, let's go back to the expansion of  <b>\( (a+x)^n \)</b><br><br>
+   We have to re-write as <br><br>
+   \( {a^n(1+{x \over a})^n} \)......eq(i)<br><br>
+   Now we can use <b>Binomial expansion</b><br><br>
+   \( {a^n(1+{x \over a})^n} =  {{a^n}[{{1}+{{}^{n}C_{1}({x \over a})}+{{}^{n}C_{2}({x \over a})^2}+...+{{}^{n}C_{n-1}({x \over a})^{n-1}}+{({x \over a})^n}}]}\)<br><br>
+    After which we open the brackets <br><br>
+    <u><b>Note</b></u> : Given any expression of the form \( (a+x)^n  \), we have to simplify this and put it in form of eq(i).<br>
+    This is because we can only use <b>Binomial expansion</b> <em>Iff</em> the first term in the bracket(or the constant) is equal to 1.<br><br>
+  </p>
+  <br>
+  <p>
+    <u><h3>Examples</h3></u><br><br>
+    (1) Expand  \( {(3+x)^4}  \)<br><br>
+    <u>Solution</u><br><br>
+     Now we need to put  \( {(3+x)^4}  \)  in form of eq(i)<br><br>
+     \( {(3+x)^4} = {[3(1+{x \over 3})]^4} \)<br><br>
+               \( \implies  {3^4(1+{x \over 3})^4} \) <br><br>
+               \( \implies  {81(1+{x \over 3})^4} \)<br><br>
+  Now, we use the Binomial expansion formula <br><br>
+  \( {(3+x)^4} = {81(1+{x \over 3})^4} \)<br><br>
+  \(  \implies   {81[{1+{}^{4}C_{1}({x \over 3})+{}^{4}C_{2}({x \over 3})^2+{}^{4}C_{3}({x \over 3})^3+{({x \over 3})^4}}]} \)<br><br>
+  <big>\(  \implies   {81{[1+{(4){({x \over 3})}}+{(6){({{x^2} \over 9})}}+{(4){({{x^3} \over 27})}}+{{x^4} \over 81}]}} \)</big><br><br>
+  \( {(3+x)^4}  =  {81[1+({{4x} \over 3})+({{6x^2} \over 9})+({{4x^3} \over 27})+{{{x^4} \over 81}}]} \)<br><br>
+  \( \therefore   {(3+x)^4}  =  {81+108x+54x^2+12x^3+x^4}   \)<br>
+  </p>
+  <br>
+  <p>
+    (2) Expand  \(  {(2-x)^6}  \)<br><br>
+    <u>Solution</u><br><br>
+    Now,  \(  {(2-x)^6}  =  {[2(1-{x \over 2})]^6} \)<br><br>
+                         \( {2^6(1-{x \over 2})^6}  \)<br><br>
+     Then we can use Binomial expansion formula <br><br>
+     \(  {(2-x)^6}  =  {2^6(1-{x \over 2})^6}  \)<br><br>
+     \(  \implies   {64[{1+{{}^{6}C_{1}( \frac{-x}{2} )}+{{}^{6}C_{2}{( \frac{-x}{2} )^2}}+{{}^{6}C_{3}{( \frac{-x}{2} )^3}}+{{}^{6}C_{4}{( \frac{-x}{2} )^4}}+{{}^{6}C_{5}{( \frac{-x}{2} )^5}}+({ \frac{-x}{2}})^6}]} \) <br><br>
+     \(  \implies  {64[{1+{(6)({ \frac{-x}{2} })}+{(15)({ \frac{x^2}{4} })}+{(20)({ \frac{(-x)^3}{8} })}+{(15)({ \frac{x^4}{16} })}+{(6)({ \frac{(-x)^5}{32} })}}+{{x^6} \over 64}]}  \)<br><br>
+     \(  \implies  {64[{1-{({ \frac{6x}{2} })}+{({ \frac{15x^2}{4} })}-{({ \frac{20x^3}{8} })}+{({ \frac{15x^4}{16} })}-{({ \frac{6x^5}{32} })}}+{{x^6} \over 64}]}  \)<br><br>
+     \(  \implies  {(2-x)^6}  =  {64-192x+240x^2-160x^3+60x^4-12x^5+x^6} \) <br><br>
+  </p>
+  <br>
+  <p>
+    (3) Expand in powers of x, \( {(1+2x+2x^2)^3}  \)<br><br>
+    <u>Solution</u><br><br>
+    \( {(1+2x+2x^2)^3}  =   {[1+{(2x+2x^2)}]^3}\)<br><br>
+    \(   =  {1+{{}^3C_1({2x+2x^2})}+{{}^3C_2({2x+2x^2})^2}+{({2x+2x^2})^3}}  \)<br><br>
+    \(   =  {1+3({2x+2x^2})+3({2x+2x^2})^2+({2x+2x^2})^3} \)<br><br>
+    \(   =  {1+6x+6x^2+3[{2x({1+x})}]^2+[{2x({1+x})}]^3} \)<br><br>
+    \(   = {1+6x+6x^2+3[{({2x})^2({1+x})^2}]+[{{(2x)^3}({1+x})^3}]} \)<br><br>
+    \(   = {1+6x+6x^2+12x^2({1+x})^2+8x^3({1+x})^3} \)<br><br>
+    \(   = {1+6x+6x^2+12x^2[{1+{}^2C_1x+x^2}]+8x^3[{1+{}^3C_1x+{}^3C_2x^2+x^3}]} \)<br><br>
+    \(   = {1+6x+6x^2+12x^2[{1+2x+x^2}]+8x^3[{1+3x+3x^2+x^3}]} \)<br><br>
+    \( \implies {(1+2x+2x^2)^3} =  {1+6x+18x^2+32x^3+36x^4+24x^5+8x^6} \)<br><br>
+  </p>
+  <br>
+  <p>
+    (4) Expand in powers of \( x \), \( ({1-x+2x^2})^4 \)<br><br>
+    <u>Solution</u><br><br>
+    We have \( ({1-x+2x^2})^4  =   \big[{1+({-x+2x^2})}\big]^4 \)<br><br>
+    \( \implies ({1-x+2x^2})^4  =   \big[{1+({-x+2x^2})}\big]^4 \)<br><br>
+    \(  =  {1+{}^4C_1({-x+2x^2})+{}^4C_2({-x+2x^2})^2+{}^4C_3({-x+2x^2})^3+({-x+2x^2})^4} \)<br><br>
+    \(  =  {1+4({-x+2x^2})+6({-x+2x^2})^2+4({-x+2x^2})^3+({-x+2x^2})^4} \)<br><br>
+    \(  =  {1-4x+8x^2+6[{-x({1-2x})}]^2+4[{-x({1-2x})}]^3+[{-x({1-2x})}]^4} \)<br><br>
+    \(  =  {1-4x+8x^2+6({-x})^2({1-2x})^2+4({-x})^3({1-2x})^3+({-x})^4({1-2x})^4} \) <br><br>
+    \(  =  {1-4x+8x^2+6x^2({1-2x})^2-4x^3({1-2x})^3+x^4({1-2x})^4} \) <br><br>
+    \(  =  {1-4x+8x^2+6x^2[{1+{}^2C_1({-2x})+({-2x})^2}]-4x^3[{1+{}^3C_1({-2x})+{}^3C_2({-2x})^2+({-2x})^3}]+} \) <br><br>
+    \( {x^4[{1+{}^4C_1({-2x})+{}^4C_2({-2x})^2+{}^4C_3({-2x})^3+({-2x})^4}]} \)<br><br>
+    \(  =  {1-4x+8x^2+6x^2[{1-4x+4x^2}]-4x^3[1-6x+12x^2-8x^3]+} \)<br><br>
+    \( {x^4[1-8x+24x^2-32x^3+16x^4]} \)<br><br>
+    \(  \implies  ({1-x+2x^2})^4  =  {1-4x+14x^2-28x^3+49x^4-56x^5+56x^6-32x^7+16x^8} \)<br><br>
+  </p>
+  <br>
+  <p>
+    <h3><u>Binomial Expansion(when \( x \) is not a positive integer)</u></h3><br><br>
+    If \( x \) is so small ( \( {-1 < x < 1 } \) ) and \( n \) is any real number(positive or negative), then <br><br>
+    <big>\( ({1+x})^n  =  {1+{ \frac{n}{1!}}x^1+{ \frac{n(n-1)}{2!}}x^2+{ \frac{n(n-1)(n-2)}{3!}}x^3+...} \)</big>  <br><br>
+    This formula works for any value of \( n \),be it a positive integer, a negtive integer, or a fraction.<br>
+    <u>Note</u>: The first term(or the constant) in the bracket must be equal to 1. <br><br>
+  </p>
+  <br>
+  <p>
+   <h3><u>Examples</u></h3><br><br>
+   (1) Obtain the first four terms of the expansion of  \( {{(1+3x)}^{1 \over 3}} \) <br>
+   in ascending powers of \( x \). Hence, evaluate \( {\sqrt[3]{1.03}}  \) to 5 significant figures.<br><br>
+   <u>Solution</u><br><br>
+  First, from \( {{(1+3x)}^{1 \over 3}} \), we notice that \( n = {1 \over 3} \)<br>
+  So we apply the Binomial formula <br><br>
+  <big>\( ({1+x})^n  =  {1+{ \frac{n}{1!}}x^1+{ \frac{n(n-1)}{2!}}x^2+{ \frac{n(n-1)(n-2)}{3!}}x^3+...} \)</big> <br><br>
+  Now <br>
+  <big>\( ({1+3x})^{1 \over 3}  =  {1+{ \frac{1 \over 3}{1!}}(3x)^1+{ \frac{({1 \over 3})({{1 \over 3}-1})}{2!}}(3x)^2+{ \frac{({1 \over 3})({{1 \over 3}-1})({{1 \over 3}-2})}{3!}}(3x)^3+...} \)</big>  <br><br>
+  <big>\( \implies ({1+3x})^{1 \over 3}  =  {1+ {1 \over 3}(3x)+{{({1 \over 3})({{-2} \over 3})} \over 2}(9x^2)+{{({1 \over 3})({{-2} \over 3})({{-5} \over 3})} \over 6}(27x^3)+...} \)</big>  <br><br>
+  <big>\(  =  {1+x+{({{-2} \over 9}) \over 2}(9x^2)++{({{10} \over {27}}) \over 6}(27x^3)+... }  \)</big> <br><br>
+  <big>\( \implies ({1+3x})^{1 \over 3}  = {1+x-x^2+{5 \over 3}x^3+....} \)</big> <br><br>
+   Hence we need to use this expansion to evaluate \({\sqrt[3]{1.03}}  \) to 5 significant figures <br><br>
+   Now,  \({\sqrt[3]{1.03}}  = {(1.03)^{1 \over 3}}  =  {(1+0.03)^{1 \over 3}}  \)<br><br>
+   Comparing with \( {{(1+3x)}^{1 \over 3}} \), we have that <br><br>
+   \(  {3x = 0.03}\)<br><br>
+   \( \implies {x = {{0.03} \over 3} } \) <br><br>
+   \( \implies {x = 0.01} \)<br><br>
+   Since we already have the expansion <br><br>
+   <big>\( ({1+3x})^{1 \over 3}  = {1+x-x^2+{5 \over 3}x^3} \)</big> <br><br>
+   Since \(  {x = 0.01} \), then <br><br>
+   <big>\( ({1+3x})^{1 \over 3}  = {1+(0.01)-(0.01)^2+{5 \over 3}(0.01)^3} \)</big> <br><br>
+   \(  =  {1+0.01-0.0001+0.0000017}  \)<br><br>
+   \(  =  {1.0099017}  \)<br><br>
+   <big>\( \therefore  {\sqrt[3]{1.03}} =  {1.0099} \)</big>   to 5 significant figures. <br><br>
+  </p>
+  <br>
+  <p>
+    2(a) Show that <big>\( {1\over {(1-x)^2}} = {1+2x+3x^2+4x^3+...}  \)</big>  <br><br>
+    2(b) Show that  <big>\( {1\over {(1-x)^3}} = {1+3x+{{3 \times {4x^2}} \over 2}+{{4 \times {5x^3}} \over 2}+...}  \)</big> <br><br>
+    <u>Solution</u><br><br>
+    2(a) \( {1\over {(1-x)^2}} \)<br><br>
+    From the laws of indices, recall that  \( {1 \over a} = {a^{-1}} \) <br><br>
+    <big>\( \therefore  {1\over {(1-x)^2}} =  {[{(1-x)^2}]^{-1}} = {(1-x)^{-2}} \)</big> <br><br>
+    Here, \({n = {-2}} \), so we proceed to expand <br><br>
+    <big> \( {1\over {(1-x)^2}} ={(1-x)^{-2}} \)</big> <br><br>
+    <big>\(  =  {1+{({-2}) \over {1!}}({-x})+{{({-2})({-2-1})} \over {2!}}({-x})^2+{{({-2})({-2-1})({-2-2})} \over {3!}}({-x})^3+{{({-2})({-2-1})({-2-2})({-2-3})} \over {4!}}({-x})^4+...} \)</big><br><br>
+    <big>\(  =  {1+2x+{{({-2})({-3})} \over 2}x^2+{{({-2})({-3})({-4})} \over 6}x^3+{{({-2})({-3})({-4})({-5})} \over 24}x^4+...} \)</big><br><br>
+    <big>\(  =  {1+2x+{6 \over 2}x^2-4({-x^3})+5x^4+...} \)</big><br><br>
+    <big>\(  \implies  {1\over {(1-x)^2}} = {1+2x+3x^2+4x^3+5x^4+...}  \)</big> <br><br>
+    <br>
+    2(b) \( {1\over {(1-x)^3}} \) <br><br>
+    Using the law of indices,<br><br>
+    <big>\( {1\over {(1-x)^3}} =  {[{(1-x)^3}]^{-1}} = {(1-x)^{-3}} \)</big> <br><br>
+    <big>\(  =  {1+{({-3}) \over {1!}}({-x})+{{({-3})({-4})} \over {2!}}({-x})^2+{{({-3})({-4})({-5})} \over {3!}}({-x})^3+{{({-3})({-4})({-5})({-6})} \over {4!}}({-x})^4+...} \)</big><br><br>
+    <big>\(  =  {1+3x+{{3 \times 4} \over 2}x^2-{{3 \times {4} \times 5} \over 6}({-x^3})+...} \) <br><br>
+    <big>\(  =  {1+3x+{{3 \times 4} \over 2}x^2-{{4 \times 5} \over 2}({-x^3})+...} \)</big> <br><br>
+    <big>\(  =  {1+3x+{{3 \times 4} \over 2}x^2+{{4 \times 5} \over 2}x^3+...} \)</big> <br><br>
+  </p>
+  <br>
+  <p>
+    (3) Expand in ascending powers of \( x \),  <big>\(   {1 \over {({6-x^3})^2}}  \)</big> <br><br>
+    <u>Solution</u><br><br>
+    From the laws of indices, we have that  <br><br>
+    <big>\(   {1 \over {({6-x^3})^2}} \)</big> \(  =  {({6-x^3})^{-2}} \) <br><br>
+    But we cannot use Binomial formula for  \( {({6-x^3})^{-2}} \) since the first term in the bracket is not equal to \( 1 \) .<br><br>
+    We then proceed as follows <br><br>
+    \( {({6-x^3})^{-2}} =  {[6{({1-{{x^3} \over 6}})}]^{-2}}  =  {6^{-2}({1-{{x^3} \over 6}})^{-2}} \)<br><br>
+    <big>\(  =  {{1 \over {6^2}}({1-{{x^3} \over 6}})^{-2}}   = {{1 \over {36}}({1-{{x^3} \over 6}})^{-2}} \)</big><br><br>
+    So, we have that <br><br>
+    \(  {({6-x^3})^{-2}} = {{1 \over {36}}({1-{{x^3} \over 6}})^{-2}}  \)<br><br>
+    Now, we can expand <br><br>
+    \(  {({6-x^3})^{-2}} = {{1 \over {36}}({1-{{x^3} \over 6}})^{-2}}  \)<br><br>
+    <big>\(  =  {{1 \over {36}}[{1+ \frac{(-2)}{1!}({\frac{-x^3}{6}})+ \frac{(-2)(-3)}{2!}({\frac{-x^3}{6}})^2+ \frac{(-2)(-3)(-4)}{3!}({\frac{-x^3}{6}})^3+\frac{(-2)(-3)(-4)(-5)}{4!}({\frac{-x^3}{6}})^4+...}]}  \)</big><br><br>
+    <big>\(  =  { {\frac{1}{36}}[{1+({ \frac{2}{6}})x^3+({\frac{6}{2}})( \frac{x^6}{36})+({\frac{-24}{6}})( \frac{-x^9}{216})+({\frac{120}{24}})( \frac{x^{12}}{1296})+...}]} \)</big><br><br>
+    <big>\(  =  {{ \frac{1}{36}}[{1+{ \frac{x^3}{3}}+{ \frac{x^6}{12}}+{ \frac{x^9}{64}}+{ \frac{5x^{12}}{1296}}+...}]}  \)</big><br><br>
+    <big>\(  \implies   {1 \over {({6-x^3})^2}}  =  {{ \frac{1}{36}}+{ \frac{x^3}{108}}+{ \frac{x^6}{432}}+{ \frac{x^9}{2304}}+{ \frac{5x^{12}}{46656}}+...} \)</big> <br><br>
+  </p>
+  <br>
+  <p>
+    (4a) Show that <big>\( {\sqrt{(9+x^2)}} \approx {3+{ \frac{1}{6}}x^2-{ \frac{1}{216}}x^4}  \)</big> <br><br>
+    (4b) Show that <big>\(  { \frac{1}{a+bx}} \approx { { \frac{1}{a} }-{ \frac{b}{a^2} }x+{ \frac{b^2}{a^3} }x^2-{ \frac{b^3}{a^4} }x^3+... }  \)</big><br><br>
+    <u>Solution</u><br><br>
+    (4a)  <big>\( {\sqrt{(9+x^2)}} \)</big><br><br>
+    Fromthe laws of indices, we know that \( \sqrt{b} = {b^{1 \over 2}}  \)<br><br>
+    Then  <big>\( {\sqrt{(9+x^2)}} =  {(9+x^2)^{1 \over 2}}\)</big><br><br>
+    But wecan't use the Binomial formula, since thefirst term \( 9 \ne 1\)<br><br>
+    So we proceed <br><br>
+    <big>\(  {(9+x^2)^{1 \over 2}}  =  {[9{(1+{\frac{x^2}{9}})}]^{1 \over 2}} =  {9^{1 \over 2}{(1+{\frac{x^2}{9}})^{1 \over 2}}} \)</big> <br><br>
+    <big>\(  \implies  {(9+x^2)^{1 \over 2}}   =  {3{(1+{\frac{x^2}{9}})^{1 \over 2}}} \)</big> <br><br>
+    <big>\(   =   {3[{1+{ \frac{({1 \over 2})}{1!}}({\frac{x^2}{9}})+{ \frac{({1 \over 2})({{1 \over 2}-1})}{2!}}({\frac{x^2}{9}})^2+...}]}  \)</big> <br><br>
+    <big>\(   =   {3[{1+{\frac{x^2}{18}}+{ \frac{({1 \over 2})({{-1} \over 2})}{2}}({\frac{x^4}{81}})+...}]}  \)</big> <br><br>
+    <big>\(   =   {3[{1+{\frac{x^2}{18}}-{ \frac{1}{8}}({\frac{x^4}{81}})+...}]}  \)</big> <br><br>
+    <big>\(   =   {3[{1+{\frac{x^2}{18}}-{\frac{x^4}{648}}+...}]}  \)</big> <br><br>
+    <big>\(  \implies  {(9+x^2)^{1 \over 2}}  =   {3+{\frac{x^2}{6}}-{\frac{x^4}{216}}+...}  \)</big> <br><br>
+    <big>\(  \therefore  {(9+x^2)^{1 \over 2}}  \approx   {3+{\frac{x^2}{6}}-{\frac{x^4}{216}}}  \)</big> <br><br>
+    <br>
+    (4b) \(  { \frac{1}{a+bx}} \)<br><br>
+    From the laws of indices, weknow that  \( \sqrt{a} = {a^{1 \over 2}}  \) <br><br>
+    So we have <br><br>
+    \(  { \frac{1}{a+bx}} =  {(a+bx)^-1}  \)<br><br>
+    But again, we cannot use the Binomial formula since the first term is \( a \)<br><br>
+    Now,  <big>\(   {({a+bx})^{-1}}   =  {[{a+({1+ {\frac{bx}{a}}})}]^{-1}} \)</big><br><br>
+    <big>\( =  {{a^{-1}}({1+{ \frac{bx}{a}}})^{-1}}  =  {{1 \over a}({1+{ \frac{bx}{a}}})^{-1}} \)</big><br><br>
+    So <br><br>
+    <big>\(  { \frac{1}{a+bx}} =  {{1 \over a}({1+{ \frac{bx}{a}}})^{-1}} \)</big><br><br>
+    <big>\(  =  {{1 \over a}[{1+{\frac{-1}{1!}}({\frac{bx}{a}})+{\frac{(-1)(-2)}{2!}}({\frac{bx}{a}})^2+{\frac{(-1)(-2)(-3)}{3!}}({\frac{bx}{a}})^3+...}]}  \)</big><br><br>
+    <big>\( =  {{1 \over a}[{1-{\frac{bx}{a}}+{\frac{2}{2}}({\frac{b^2x^2}{a^2}})-{\frac{6}{6}}({\frac{b^3x^3}{a^3}})+...}]}  \)</big><br><br>
+    <big> \(  = {{1 \over a}[{1-{\frac{bx}{a}}+{\frac{b^2x^2}{a^2}}-{\frac{b^3x^3}{a^3}}+...}]}  \)  </big><br><br>
+    <big> \(  = {{1 \over a}-{\frac{b}{a^2}}x+{\frac{b^2}{a^3}}x^2-{\frac{b^3}{a^4}}x^3+...}  \)  </big><br><br>
+    <big>\( \implies { \frac{1}{a+bx}} \approx { { \frac{1}{a} }-{ \frac{b}{a^2} }x+{ \frac{b^2}{a^3} }x^2-{ \frac{b^3}{a^4} }x^3+... }  \)</big><br><br>
+  </p>
+  <br>
+  <p>
+    (5) Show that if \( x \) is so small that \(  x^3 \) and higher powers of \( x \) may be neglected : <br><br>
+    (a) <big>\( {{{({1+x})^{3 \over 2}}-{({1+{1 \over 2}x})^3}} \over { \sqrt{(1-x)}}}  \approx  {{{-3} \over 8}x^2}  \)</big><br><br>
+    (b) <big>  \( {\sqrt{({{1+x} \over {1-x}})}} =  {1+x+{1 \over 2}x^2}  \)  </big>. By putting \( {x = {1 \over 7}} \), show that \( \sqrt{3}  \approx {\frac{196}{113}}  \).<br><br>
+    <u>Solution</u><br><br>
+    (a) <big>\( {{{({1+x})^{3 \over 2}}-{({1+{1 \over 2}x})^3}} \over { \sqrt{(1-x)}}} \)<br><br>
+      We can re-write this as <br><br>
+      <big>\( {[{(1+x)^{3 \over 2} - ({1+{1 \over 2}x})^3}][{ \sqrt{(1-x)}}]^{-1}}  \)</big> <br><br>
+      <big>\( {[{(1+x)^{3 \over 2} - ({1+{1 \over 2}x})^3}]{(1-x)}^{{-1} \over 2}}  \)</big> <br><br>
+      Now we can expand each term. Given that \(  x^3 \) and higher powers of \( x \) may be neglected <br><br>
+      <big>\( {(1+x)^{3 \over 2} =  {1+{\frac{({3 \over 2})}{1!}}x+{\frac{({3 \over 2})({{3 \over 2}-1})}{2!}}x^2+...  } } \)</big><br><br>
+      <big>\(  =  {1+{3 \over 2}x+{\frac{({3 \over 2})({1 \over 2})}{2}}x^2+...  }  \)</big><br><br>
+      <big>\( \implies  {(1+x)^{3 \over 2}} =  {1+{3 \over 2}x+{\frac{3}{8}}x^2+...  }  \)</big>    eq(i)<br><br>
+      Also <br><br>
+      <big>\(  {({1+{1 \over 2}x})^3}  =  {1+ {\frac{3}{1!}}({1 \over2}x)+{\frac{(3)(2)}{2!}}({1 \over2}x)^2+...}  \)</big><br><br>
+         <big>\(   =   {1+ {3 \over 2}x+{6 \over 2}({1 \over 4}x^2)+...}  \)</big><br><br>
+         <big>\(  \implies  {({1+{1 \over 2}x})^3}  = {1+{3 \over 2}x+{3 \over 4}x^2+...}  \)</big>   eq(ii)<br><br>
+         Also <br><br>
+
+         <big>\(  {(1-x)}^{{-1} \over 2}  =  {1+{\frac{({{-1} \over 2})}{1!}}({-x})+{\frac{({{-1} \over 2})({{{-1} \over 2}-1})}{2!}}({-x})^2+...}  \)</big><br><br>
+         <big>\(  = {1+{\frac{1}{2}}x+{\frac{({{-1} \over 2})({{-3} \over 2})}{2}}x^2+...}  \)</big><br><br>
+         <big> \( \implies  {(1-x)}^{{-1} \over 2}  =  {1+{1 \over 2}x+{3 \over 8}x^2+...} \)</big>   eq(iii)<br><br>
+         Bringing eq(i), (ii) and (iii) together, and neglexting \( x^3 \) and higher powers of \( x \), we have <br><br>
+         <big>\( {[{(1+x)^{3 \over 2} - ({1+{1 \over 2}x})^3}]{(1-x)}^{{-1} \over 2}}  \)</big> <br><br>
+         <big>\( {[{({1+{3 \over 2}x+{\frac{3}{8}}x^2})-({1+{3 \over 2}x+{3 \over 4}x^2})}][{1+{1 \over 2}x+{3 \over 8}x^2}]}  \)</big><br><br>
+         <big>\(  =  {[{1+{3 \over 2}x+{\frac{3}{8}}x^2-1-{3 \over 2}x-{3 \over 4}x^2+}][{1+{1 \over 2}x+{3 \over 8}x^2}]}  \)</big><br><br>
+         <big>\(  =  {[{{\frac{-3}{8}}x^2}][{1+{1 \over 2}x+{3 \over 8}x^2}]}  \)</big><br><br>
+         <big>\(   =  {{\frac{-3}{8}}x^2-{\frac{3}{8}}x^3-{\frac{9}{64}}x^4}  \)</big><br><br>
+         <big> \(   =  {{\frac{-3}{8}}x^2}   \)</big> (neglecting \( x^3 \) and higher powers of \( x \) )<br><br>
+          <big>\( \therefore {{{({1+x})^{3 \over 2}}-{({1+{1 \over 2}x})^3}} \over { \sqrt{(1-x)}}}  \approx  {{{-3} \over 8}x^2}  \)</big>   (neglecting \( x^3 \) and higher powers of \( x \) )<br><br>
+          (b) <big>  \( {\sqrt{({{1+x} \over {1-x}})}} \)</big> <br><br>
+            We can rewrite as <br><br>
+            \<big>\( {\sqrt{({{1+x} \over {1-x}})}}  =  {\frac{\sqrt{(1+x)}}{\sqrt{(1-x)}}} +=  {\frac{(1+x)^{1 \over 2}}{(1-x)^{1 \over 2}}} \)</big><br><br>
+            <big>\( =  {{({1+x})^{1 \over 2}}{[{({1-x})^{1 \over 2}}]^{-1}}} \)</big><br><br>
+            <big>  \( \implies {\sqrt{({{1+x} \over {1-x}})}} = {{({1+x})^{1 \over 2}}{({1-x})^{{-1} \over 2}}} \)</big> <br><br>
+            We can now expand each term separately, then bring them together <br><br>
+            Now <br><br>
+            <big>\(  {(1+x)}^{1 \over 2}  =  {1+{\frac{({1 \over 2})}{1!}}({x})+{\frac{({1 \over 2})({{1 \over 2}-1})}{2!}}({x})^2+...}  \)</big><br><br>
+            <big>\(   =  {1+{\frac{1}{2}}x+{\frac{({1 \over 2})({{-1} \over 2})}{2}}x^2+...}  \)</big><br><br>
+            <big>\( \implies {(1+x)}^{1 \over 2}   =  {1+{1 \over 2}x-{1 \over 8}x^2+...}  \)</big>  eq(1) <br><br>
+            Also <br><br>
+            <big>\(  {(1-x)}^{{-1} \over 2}  =  {1+{\frac{({{-1} \over 2})}{1!}}({-x})+{\frac{({{-1} \over 2})({{{-1} \over 2}-1})}{2!}}({-x})^2+...}  \)</big><br><br>
+            <big>\(  = {1+{\frac{1}{2}}x+{\frac{({{-1} \over 2})({{-3} \over 2})}{2}}x^2+...}  \)</big><br><br>
+            <big> \( \implies  {(1-x)}^{{-1} \over 2}  =  {1+{1 \over 2}x+{3 \over 8}x^2+...} \)</big>   eq(2)<br><br>
+            Now, bringing eq(1) and (2) together <br><br>
+            <big>  \(  {\sqrt{({{1+x} \over {1-x}})}} = {{({1+x})^{1 \over 2}}{({1-x})^{{-1} \over 2}}} \)</big> <br><br>
+            <big>\(    =    {({1+{1 \over 2}x-{1 \over 8}x^2+...})({1+{1 \over 2}x+{3 \over 8}x^2+...})}\)</big><br><br>
+            <big>\(   =  {1+{1 \over 2}x+{3 \over 8}x^2+{1 \over 2}x+{1 \over 4}x^2}+{3 \over {16}}x^3-{1 \over 8}x^2-{1 \over {16}}x^3+...  \)</big><br><br>
+            <big>\(   = {1+x+{1 \over 2}x^2+{1 \over 8}x^3+...} \)</big><br><br>
+            <big>\(  \implies {\sqrt{({{1+x} \over {1-x}})}} = {1+x+{1 \over 2}x^2} \)</big>  (neglecting \( x^3 \) and higher powers of \( x \) )<br><br>
+            By putting \( x = {1 \over 7} \)<br><br>
+            <big>\(   {\sqrt{({{1+{1 \over 7}} \over {1-{1 \over 7}}})}} = {1+{1 \over 7}+{1 \over 2}{({1 \over 7})}^2} \)</big><br><br>
+            <big>\(  {\sqrt{({{8/7} \over {6/7}})}} = {1+{1 \over 7}+{1 \over 2}({1 \over {49}})}   \)</big><br><br>
+            <big>\(  \implies  {\sqrt{8/6}} = {1+{1 \over 7}+{1 \over {98}}}  \)</big><br><br>
+            <big>\(  \implies  {\sqrt{4 \over 3}} =    {{98+14+1} \over {98}}  \)</big><br><br>
+            <big>\(   \implies {2 \over {\sqrt{3}}} = { {113} \over {98}}  \)</big><br><br>
+            <big>\(   \implies {1 \over {\sqrt{3}}} = { {113} \over {196}}  \)</big><br><br>
+            \(  \implies  {\sqrt{3}} \approx  {{196} \over {113}}  \)<br><br>
+  </p>
+  <br>
+  <p>
+    (6) Obtain the expansion of  \( {{3-4x} \over {1-3x+2x^2}}   \)  in ascending powers of \(x \) as far as the term in \( x^4 \).<br><br>
+    <u>Solution</u><br><br>
+    \( {{3-4x} \over {1-3x+2x^2}}   \) <br><br>
+    We can rearrange the denominator to obtain  \( {2x^2-3x+1} \) <br><br>
+    Again, we can factorize it to have <br><br>
+    \( {2x^2-3x+1} = {2x^2-2x-x+1} =  {2x{({x-1})}}-1{({x-1})} \) <br><br>
+    \(  =  {(2x-1)}{(x-1)}\) <br><br>
+    \(  =  {({-1+x})}{({-1+2x})}\) <br><br>
+    So,   \( {{3-4x} \over {1-3x+2x^2}} = {{3-4x} \over {({-1+x})}{({-1+2x})} }  \)<br><br>
+    \(   =   {({3-4x})}{[{(-1+x)}{(-1+2x)}]^{-1}}  \)<br><br>
+    \( {{3-4x} \over {1-3x+2x^2}} =  {({3-4x})}{[{(-1+x)^{-1}}{(-1+2x)^{-1}}]} \)<br><br>
+    Now, we need to expand \( {(-1+x)^{-1}}  \)  and  \( {(-1+2x)^{-1}}  \) <br><br>
+    Now <br><br>
+    \(   {(-1+x)^{-1}}  = {[{-1{(1-x)}}]^{-1}}  =  {-{(1-x)^{-1}}}  \)<br><br>
+    \(     =   {-{[{1+{\frac{(-1)}{1!}}(-x)+{\frac{(-1)(-2)}{2!}}(-x)^2+{\frac{(-1)(-2)(-3)}{3!}}(-x)^3+{\frac{(-1)(-2)(-3)(-4)}{4!}}(-x)^4+...}]}}\)<br><br>
+    \(     =   {-{[{1+x+{2 \over 2}x^2+{6 \over 6}x^3+{{24} \over {24}}x^4+...}]}}\)<br><br>
+    \(  \implies  {(-1+x)^{-1}}  =  {-1-x-x^2-x^3-x^4}... \)  eq(i) <br><br>
+    Also <br><br>
+    \(   {(-1+2x)^{-1}}  =  {-{(1-2x)^{-1}}} \)<br><br>
+    \(     =   {-{[{1+{\frac{(-1)}{1!}}(-2x)+{\frac{(-1)(-2)}{2!}}(-2x)^2+{\frac{(-1)(-2)(-3)}{3!}}(-2x)^3+{\frac{(-1)(-2)(-3)(-4)}{4!}}(-2x)^4+...}]}}\)<br><br>
+    \(     =   {-{[{1+2x+{2 \over 2}({4x^2})+{6 \over 6}({-8x^3})+{{24} \over {24}}({16x^4})+...}]}}\)<br><br>
+    \(     =   {-{[{1+2x+4x^2+8x^3+16x^4+...}]}} \)<br><br>
+    \( \implies   {(-1+2x)^{-1}}  =   {-1-2x-4x^2-8x^3-16x^4}... \) eq(ii) <br><br>
+    \(  \implies  {{3-4x} \over {1-3x+2x^2}} =  {({3-4x})}{[{(-1+x)^{-1}}{(-1+2x)^{-1}}]} \)<br><br>
+    \( = {({3-4x})}[{({-1-x-x^2-x^3-x^4})}{({-1-2x-4x^2-8x^3-16x^4})}] \)<br><br>
+    \(  =  {({3-4x})}{[{1+3x+7x^2+15x^3+31x^4+...}]}   \)<br><br>
+    \(  =  {3+9x+21x^2+45x^3+93x^4-4x-12x^2-28x^3-60x^4+...}  \)<br><br>
+    \(  =  {3+5x+9x^2+17x^3+33x^4+...}\)<br><br>
+  </p>
+  <br>
+  <p>
+    <u><h3>Formula for finding the  \( (r+1)th \)  term</h3></u><br><br>
+    The  \( (r+1)th \)  term in the expansion of \( {{(a+b)}^n} \)  is given  by  <br><br>
+    \(  {{}^nC_r{a^{n-r}b^r}}  \)<br><br>
+    This formula is useful for finding  any term in an expansion. <br><br>
+  </p>
+  <br>
+  <p>
+    <h3><u>Examples</u></h3><br><br>
+    (1) Find the coefficient of \( x^6 \) in the expansion of  \( {({{\frac{1}{x^2}}-x})^{18}}  \) <br><br>
+    (2) Find the term independent of \( y \) in the expansion of  \( {({{\frac{x^4}{y^3}}+{\frac{y^2}{2x}}})^{10}}  \) <br><br>
+    (3) Find the term indendent of \( x \) in the expansion of  \( {({{2x}-{\frac{3}{x^2}}})^6}  \)<br><br>
+  </p>
+  <p>
+    <u>Solution</u><br><br>
+    (1) We need to find the coefficient of \( x^6 \)  in the expansion of <br><br>
+     \( {({{\frac{1}{x^2}}-x})^{18}} ....eq(i) \) <br><br>
+     Now, recall the formula for finding  the  \( (r+1)th \)  term  in the expansion of  \( {{(a+b)}^n} \)<br><br>
+     The formula is  \(  {{}^nC_r{a^{n-r}b^r}} ....eq(ii) \)<br><br>
+     Comparing eq(i) and (ii), we have that <br><br>
+     \(   {a = {1 \over {x^2}}} \) ,  \( {b = {-x}} \), \( {n = 18 } \), \( r \) is unknown<br><br>
+     Using the formula, we have <br><br>
+     \(  {{}^{18}C_r{({1 \over {x^2}})^{18-r}}({-x})^r}  =  {{}^{18}C_r{({x^{-2}})^{18-r}}({-x})^r}  \)<br><br>
+     \(   =  {{}^{18}C_r{{x}^{-36+2r}}({-x})^r}  \)<br><br>
+     \(   =  {{}^{18}C_r{({-x})^{-36+2r+r}}}  \)<br><br>
+     \(   =  {{}^{18}C_r{({-x})^{-36+3r}}}  ...eq(iii)\)<br><br>
+     Since we need the coefficient of  \( x^6 \), we equate the power of \( x \) in eq(iii) to 6 <br><br>
+     That is <br><br>
+     \(  {{-36+3r} = 6} \)<br><br>
+     \(\implies 3r = 42 \implies r = 14 \)<br><br>
+     Puttingthe value of \( r \) into eq(iii), we have the \( (r+1)th \)  term <br><br>
+     \(   =  {{}^{18}C_{14}{({-x})^{-36+3(14)}}}\)<br><br>
+     \(   =    {3060x^6}  \)<br><br>
+     \(   \therefore  \) The coefficient of \( x^6 \) is \( 3060 \)<br><br>
+  </p>
+  <p>
+    (2) We need to find the term independent of \( y \) in the expansion of  \( {({{\frac{x^4}{y^3}}+{\frac{y^2}{2x}}})^{10}}  \) <br><br>
+    Again, we use the formula for finding the   \( (r+1)th \)  term. <br><br>
+    \(  {{}^nC_r{a^{n-r}b^r}} \)<br><br>
+    Here, \(   {a = {{x^4} \over {y^3}}} \) ,  \( {b = {{y^2} \over {2x}}} \), \( {n = 10 } \), \( r \) is unknown<br><br>
+    So, we have <br><br>
+    \( {{}^{10}C_r{({{x^4} \over {y^3}})^{10-r}}{({{y^2} \over 2x})^r}} \)<br><br>
+    \( =  {{}^{10}C_r{({{x^4}{y^{-3}}})^{10-r}}{({2^{-1}{y^2}x^{-1}})^r}} \)<br><br>
+    \( =  {{}^{10}C_r \times {{x^{4{(10-r)}}} \times {y^{-3{(10-r)}}} \times {2^{-r}} \times {y^{2r}} \times {x^{-r}}}} \)<br><br>
+    \( =  {{1 \over {2^r}} \times {}^{10}C_r \times {{x^{40-4r}} \times {y^{-30+3r}} \times {y^{2r}} \times {x^{-r}}}} \)<br><br>
+    \( =  {{1 \over {2^r}} \times {}^{10}C_r \times {{x^{40-4r-r}} \times {y^{-30+3r+2r}}}} \)<br><br>
+    \( =  {{1 \over {2^r}} \times {}^{10}C_r \times {{x^{40-5r}} \times {y^{-30+5r}}}} ...eq(*)\)<br><br>
+    Since we are looking for the term independent of \( y \), <br>
+    it means the term in which the power of \( y \) is equal to zero.<br><br>
+    So, we equate the power of \( y \) in eq(*) to zero. Then we have <br><br>
+    \( {{-30+5r}= 0} \)<br><br>
+    \( \implies {5r = 30 } \implies { r = 6 }\) <br><br>
+    Now, we put the value of \( r \) into eq(*), we have <br><br>
+    \(  {{1 \over {2^6}} \times {}^{10}C_6 \times {{x^{40-30}} \times {y^{-30+30}}}}\)<br><br>
+    \(  =  {210 \times {1 \over {64}} \times {x^{10}}} \)<br><br>
+    \(  =  {{105} \over {32}}x^{10} \)<br><br>
+    \( \therefore \), the term independent of \( y \) is   :   \(    {{105} \over {32}}x^{10} \)<br><br>
+  </p>
+  <p>
+    (3) We need to find the term independentof \( x \) in the expansion of <br><br>
+    \( {({{2x}-{\frac{3}{x^2}}})^6}  \)<br><br>
+    Again, we use the formula for finding the   \( (r+1)th \)  term. <br><br>
+    \(  {{}^nC_r{a^{n-r}b^r}} \)<br><br>
+    Here, \(   {a = 2x} \) ,  \( {b = {{-3} \over {x^2}}} \), \( {n = 6 } \), \( r \) is unknown<br><br>
+    So, we have <br><br>
+    \(   {{}^6C_r \times {(2x)^{6-r}} \times {({{-3} \over {x^2}})^r} } \)<br><br>
+    \(  {{}^6C_r \times {{2^{6-r}} \times {x^{6-r}} \times {({-3x^{-2}})^r}}}  \)<br><br>
+    \(  {{}^6C_r \times {{2^{6-r}} \times {x^{6-r}} \times {(-3)^r}{x^{-2r}}}}  \)<br><br>
+    \(  {{}^6C_r \times {{2^{6-r}} \times {x^{6-3r}} \times {(-3)^r} }}...eq(**)  \)<br><br>
+    Since we need to find the term independent of \( x \) , we need the equate the power of \( x \) in eq(**) to zero <br><br>
+    So, we have <br><br>
+    \(  {{6-3r} = 0}  \)<br><br>
+    \( \implies  {3r = 6 } \implies {r = 2} \)<br><br>
+    Putting \( {r = 2} \) in eq(**), we have <br><br>
+    \(  {{}^6C_2 \times {{2^{6-2}} \times {x^{6-6}} \times {(-3)^2} }} \)<br><br>
+    \(  =  {{}^6C_2 \times {2^4} \times {({-3})^2}} \)<br><br>
+    \(  =  {{15} \times {16} \times 9 } =  2160  \)<br><br>
+    \( \therefore \) the term independent of \( x \) is \( 2160\) <br><br>
+  </p>
+  <br>
+  <p>
+    <h3><u>Exercises</u></h3><br><br>
+    (1). Expand \( {({1-x+2x^2})^5}  \) in ascending powers of \( x \) as far as the term in \( x^4 \)<br><br>
+    (2). Expand \( {[{{(1-x)^{-1}}-{2{(1-2x)^{{-1} \over 2}}}+{(1-3x)^{{-1} \over 3}}}]} \) in ascending powers of \( x \)<br>
+    up to and including the term in \( x^3 \). <br><br>
+    (3). Show that \(  {{\frac{1}{\sqrt{(1-x)}}}- {\sqrt{(1+x)}} = {{\frac{x^2}{2}}+{\frac{x^3}{4}}}}   \)<br>
+     if \( x^4 \) and higher powers of \( x \) may be neglected. <br><br>
+     (4). If x is so small, show that <br><br>
+     <big>\( {\frac{{\sqrt{(1+6x)}}-{1 \over {\sqrt{(1-6x)}}}}{{\sqrt{(1+3x)}}-{1 \over {\sqrt{(1-3x)}}}}} \)</big>\({ \approx {4+6x}} \)<br><br>
+     (5). Expand \({(1+4x^2)^{1 \over 2}} \) in ascending powers of \( x \) up to the term in \( x^6 \). <br><br>
+     (6). Evaluatethe term independent of \( x \)in the Binomial expansion of  \( {({x^2}-{1 \over {2x}})^}  \)<br><br>
+  </p>
+  </body>
+</html>

@@ -1,0 +1,455 @@
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h2>MATHEMATICAL INDUCTION</h2><br><br>
+    <p>
+     This is a technique that can be used to prove variety of mathematical statements <br>
+      which are formulated in terms of \( n \), where \( n \) is a positive integer.<br><br>
+    </p><br>
+    <p>
+     <h3><u>The Principle of Mathematical Induction(M.I)</u></h3><br><br>
+     Let \( P(n) \) be the statement involving natural number, \( n \in {\mathbb{N}}  \)<br><br>
+     <u>STEP 1:</u> prove that \( P(1) \) is true <br><br>
+     <u>STEP 2:</u> Assume \( P(k) \) is true when   \( n = k  \)<br><br>
+     <u>STEP 3:</u> prove that \( P(k+1) \) is true, when \( n = {k+1}  \)<br><br>
+     If it is true from STEP 1 -STEP 3, then \( P(n) \) is true for all  \( n \in {\mathbb{N}}  \)<br><br>
+     To understand this principle, consider the following examples. <br><br>
+    </p>
+    <br>
+    <p>
+      <h3><u>Examples</u></h3><br><br>
+      (1) Prove by induction for all \( n \in {\mathbb{N}}  \)<br><br>
+      \( {1+3+5+...+(2n-1)} = {n^2}  \)<br><br>
+      <u>Solution</u><br><br>
+      Let \( P(n) \) be the statement. That is  <br><br>
+      \( P(n) : {1+3+5+...+(2n-1)} = {n^2}  \)<br><br>
+      STEP 1: we need to show that the statement is true for \( n = 1 \) <br><br>
+      Now, we look at the L.H.S and R.H.S of <br><br>
+      \( P(n) : {1+3+5+...+(2n-1)} = {n^2}  \)<br><br>
+      When \( n = 1 \), we need to show that L.H.S \( = \) R.H.S.<br><br>
+      For L.H.S <br><br>
+      \(  {P(1) = {2(1) - 1} = {2-1} = 1 }\)<br><br>
+      for R.H.S <br><br>
+      \(  {P(1) = {(1)^2} = 1 } \)<br><br>
+      \( \therefore P(1) \) is true. <br><br>
+      STEP 2: Now, we assume \( P(k) \) is true, when \( n = k \). That is <br><br>
+      \( P(k) : {1+3+5+...+(2k-1)} = {k^2}  \)<br><br>
+      STEP 3: Now, we need to prove for \( P(k+1) \), when \( n = {k+1} \). <br><br>
+      To do this, we add the next term to the L.H.S <br><br>
+      Looking at <br><br>
+      \( P(k) : {1+3+5+...+(2k-1)} = {k^2}  \)<br><br>
+      The next term on the L.H.S when \( k = {k+1} \) is \( {[2(k+1)-1]} \)<br><br>
+      So we add \( {[2(k+1)-1]} \) to the L.H.S. <br><br>
+      Also on the R.H.S, wherever we see \( k \), we put \( (k+1) \).<br><br>
+      Notice on the R.H.S, we have \( k^2 \), so this becomes \( (k+1)^2 \)<br><br>
+      Now, we have \( P(k+1) \)<br><br>
+      \( P(k+1) : {1+3+5+...+(2k-1)+{[2(k+1)-1]}} = {(k+1)^2}  \)<br><br>
+      Now we need to prove that \( P(k+1) \) is true.<br><br>
+      That is, we need toprove that L.H.S = R.H.S <br><br>
+      \( P(k+1) : {1+3+5+...+(2k-1)+{[2(k+1)-1]}} = {(k+1)^2}  \)<br><br>
+      But recall from STEP 2, that <br><br>
+      \(  {1+3+5+...+(2k-1)} = {k^2}  \)<br><br>
+      \( \therefore \) we have <br><br>
+      \( P(k+1) : {k^2+{[2(k+1)-1]}} = {(k+1)^2}  \)<br><br>
+      It remains to show that L.H.S = R.H.S <br><br>
+      Now, for L.H.S <br><br>
+      L.H.S \( = {k^2+{[2(k+1)-1]}} = {k^2+{[2k+2-1]}} = {k^2+2k+1} \)<br><br>
+      \(  = {k(k+1)+1(k+1)}  = {(k+1)(k+1)} = {(k+1)^2} = \) R.H.S <br><br>
+      Therefore, \( P(k+1)\) is also true. <br><br>
+      Hence, \( P(n) \) is true for all \(  n \in \mathbb{N}\) <br><br>
+    </p>
+    <br>
+    <p>
+      (2) Prove by induction for all \( n \in {\mathbb{N}}  \), \( n \ge 2 \) <br><br>
+      \( { (1-{\frac{1}{2^2}}) \times (1-{\frac{1}{3^2}}) \times ...  \times (1-{\frac{1}{n^2}}) } = {\frac{n+1}{2n}}   \)<br><br>
+      <u>Solution</u><br><br>
+      Let \( P(n) \) be the statement. That is  <br><br>
+      \( P(n) :  { (1-{\frac{1}{2^2}}) \times (1-{\frac{1}{3^2}}) \times ... \times (1-{\frac{1}{n^2}}) } = {\frac{n+1}{2n}}   \), \( n \ge 2 \)<br><br>
+      STEP 1: we need to show that the statement is true for \( n = 2 \) <br><br>
+      Now, we look at the L.H.S and R.H.S of <br><br>
+      \( P(n) :  { (1-{\frac{1}{2^2}}) \times (1-{\frac{1}{3^2}}) \times ... \times (1-{\frac{1}{n^2}}) } = {\frac{n+1}{2n}}   \)<br><br>
+      Now when \(  n = 2 \) (Since the condition given is \( n \ge 2 \) ) <br><br>
+      For L.H.S <br><br>
+      \( P(2) = {(1-{\frac{1}{2^2}})}   = {1 - {\frac{1}{4}}}  = {\frac{4-1}{4}} = {\frac{3}{4}}  \) <br><br>
+      For R.H.S <br><br>
+      \( P(2)  : {\frac{2+1}{2 \dot 2}}  = {\frac{3}{4}}  \) <br><br>
+      L.H.S = R.H.S <br><br>
+      \( \therefore P(2) \) is true <br><br>
+      STEP 2: Now, we assume \( P(k) \) is true, when \( n = k \). That is <br><br>
+      \( P(k) :  { (1-{\frac{1}{2^2}}) \times (1-{\frac{1}{3^2}}) \times ... \times (1-{\frac{1}{k^2}})} = {\frac{k+1}{2k}}   \), \( k \ge 2 \)<br><br>
+      STEP 3: Now, we need to prove for \( P(k+1) \), when \( n = {k+1} \). <br><br>
+      For the L.H.S, we need to input the next term which is \( { (1-{\frac{1}{(k+1)^2}}) }  \)<br><br>
+      On the R.H.S too, wherever we see \(k \), we put \( {k + 1} \).<br><br>
+      That is, the R.H.S becomes  \( {\frac{(k+1)+1}{2(k+1)}}  \) <br><br>
+      That is <br><br>
+      \( P(k+1) :  { (1-{\frac{1}{2^2}}) \times (1-{\frac{1}{3^2}}) \times ... \times (1-{\frac{1}{k^2}}) \times {(1-{\frac{1}{(k+1)^2}})} } =  {\frac{(k+1)+1}{2(k+1)}}  \)<br><br>
+      So, now, we need to prove that \( P(k+1) \) is true by showing that L.H.S = R.H.S <br><br>
+      But recall from STEP 2 <br><br>
+      \( { (1-{\frac{1}{2^2}}) \times (1-{\frac{1}{3^2}}) \times ... \times (1-{\frac{1}{k^2}})} = {\frac{k+1}{2k}}   \) <br><br>
+      S0, \( P(k+1) \) becomes <br><br>
+      \( P(k+1) :  { ({\frac{k+1}{2k}}) \times (1-{\frac{1}{k^2}})  } =  {\frac{(k+1)+1}{2(k+1)}}  \)<br><br>
+      Now, R.H.S \( \implies  {\frac{(k+1)+1}{2(k+1)}} = {\frac{k+2}{2(k+1)}} \) <br><br>
+      Also, L.H.S \(  \implies  { ({\frac{k+1}{2k}}) \times (1-{\frac{1}{k^2}})  } = { ({\frac{k+1}{2k}}) \times ({\frac{(k+1)^2-1}{(k+1)^2}}) } \) <br><br>
+      \( = { ({\frac{k+1}{2k}}) \times ({\frac{k^2+2k+1-1}{(k+1)^2}}) } \) <br><br>
+      \( = { ({\frac{k+1}{2k}}) \times ({\frac{k^2+2k}{(k+1)^2}}) } \) <br><br>
+      \(  = {\frac{k+1}{2k}} \times {\frac{k(k+2)}{(k+1)^2}} \) <br><br>
+      \(  = {\frac{k+2}{2(k+1)}}  \)<br><br>
+      \( \implies \) R.H.S <br><br>
+      Since L.H.S = R.H.S <br><br>
+      \(  P(k+1) \) is true whenever \( P(k) \) is true. <br><br>
+      Hence, \( p(n) \) is true  \(  \forall n \in \mathbb{N}  \), \( n \ge 2 \)<br><br>
+    </p>
+    <br>
+    <p>
+      (3) Prove by induction <br><br>
+      \( {n^2 < (2^n)}   \forall n \ge 5 \). <br><br>
+      <u>Solution</u><br><br>
+      Let \( P(n) \) be the statement <br><br>
+      \( P(n) :  {n^2 < (2^n)}  \forall n \ge 5 \). <br><br>
+      STEP 1: we need to show that the statement is true for \( n = 2 \) <br><br>
+      Now, we look at the L.H.S and R.H.S of <br><br>
+      \( P(n) :  {n^2 < (2^n)}  \forall n \ge 5 \). <br><br>
+      Now when \(  n = 5 \) (Since the condition given is \( n \ge 5 \) ) <br><br>
+      For L.H.S <br><br>
+      \( P(5) : 5^2 = 25 \) <br><br>
+      For the L.H.S <br><br>
+      \( P(5) :  2^5 = 32 \)<br><br>
+      Since \(  25 < 32 \)<br><br>
+      \( P(5) \) is true. <br><br>
+      STEP 2: Now, we assume \( P(k) \) is true, when \( n = k \). That is <br><br>
+      \( P(k) :  {k^2 < (2^k)}  \forall k \ge 5 \). <br><br>
+      STEP 3: Now, we need to prove for \( P(k+1) \), when \( n = {k+1} \). <br><br>
+      Wherever we see \( k \) on the L.H.S and R.H.S, we put \( (k+1) \) <br><br>
+     \( P(k+1) :  {(k+1)^2 < (2^{k+1}) } \). <br><br>
+     We need to show that this is true by proving L.H.S < R.H.S. <br><br>
+     We prove from L.H.S to R.H.S <br><br>
+     L.H.S \( \implies {(k+1)^2 = k^2+2k+1 } \) <br><br>
+     Recall from STEP 2 \( P(k) :  {k^2 < (2^k)} \) <br><br>
+     \( \implies k^2+2k+1 < {2^k+2k+1} \) (since \( {k^2 < (2^k)} \), we substitute \( 2^k \) for \( k^2 \) ) <br><br>
+     \( < (2^k \times 2) = { 2^{k+1} }  \implies \)  R.H.S <br><br>
+     \( \implies \) L.H.S < R.H.S <br><br>
+     Thus, \( P(k+1) \) is true whenever \( P(k) \) is true. <br><br>
+     Hence, \( P(n) \) is true \( \forall n \in \mathbb{N} \), \( n \ge 5  \)<br><br>
+    </p>
+    <br>
+    <p>
+      (4) Prove by induction <br><br>
+      \( { 2n < (n+2)!}  \forall n \in \mathbb{N} \)<br><br>
+      <u>Solution</u><br><br>
+      Let \( P(n) \) be the statement <br><br>
+      \(  P(n)  :  { 2n < (n+2)!}  \forall n \in \mathbb{N} \)<br><br>
+      STEP 1: we need to show that the statement is true for \( n = 1 \) <br><br>
+      On the L.H.S <br><br>
+      \(  P(1)  =  2(1) =  2 \)<br><br>
+      On the R.H.S <br><br>
+      \(  P(1)  = { {(1+2)!}  = {3!}  = 6  } \)<br><br>
+      Since \(  2 < 6 \)<br><br>
+      \( P(1) \) is true <br><br>
+      STEP 2: Now, we assume \( P(k) \) is true, when \( n = k \). That is <br><br>
+      \(  P(k)  :  { 2k < (k+2)!}  \forall k \in \mathbb{N} \)<br><br>
+      STEP 3: Now, we need to prove for \( P(k+1) \), when \( n = {k+1} \). <br><br>
+      \(  P(k+1)  :  { 2(k+1) < [(k+1)+2]!}   \)<br><br>
+      Simplifying, we have <br><br>
+      \(  P(k+1)  :  { 2(k+1) < (k+3)!}   \)<br><br>
+      We need to prove that L.H.S < R.H.S <br><br>
+      Now, L.H.S \( \implies {2(k+1)} = {2k+2} \)<br><br>
+      Recall from STEP 2, \( { 2k < (k+2)!}  \) <br><br>
+      \( \implies {2k+2} < {(k+2)! + 2} \)<br><br>
+      \( < {(k+3)!} = R.H.S <br><br>
+      \( \implies \) L.H.S < {R.H.S} <br><br>
+      Thus, \( P(k+1) \) is true whenever \( P(k) \) is true. <br><br>
+      Hence, \( P(n) \) is true \( \forall n \in \mathbb{N} \)<br><br>
+    </p>
+    <br>
+    <p>
+      (5) Prove by induction <br><br>
+      \( {1^2+2^2+...+n^2} = {\frac{n(n+1)(2n+1)}{6}}  \) , \( \forall n \in \mathbb{N} \)<br><br>
+      <u>Solution</u><br><br>
+      Let \( P(n) \) be the statement <br><br>
+      \(P(n)  :   {1^2+2^2+...+n^2} = {\frac{n(n+1)(2n+1)}{6}}  \) , \( \forall n \in \mathbb{N} \)<br><br>
+      STEP 1: we need to show that the statement is true for \( n = 1 \) <br><br>
+      On the L.H.S <br><br>
+      \( P(1) = (1)^2 = 1  \)<br><br>
+      On the R.H.S <br><br>
+      \( P(1) = {\frac{1(1+1)(2+1)}{6}} = {\frac{(2)(3)}{6}} = 1  \)<br><br>
+      Since L.H.S = R.H.S , \( P(1) \) is true. <br><br>
+      STEP 2: Now, we assume \( P(k) \) is true, when \( n = k \). That is <br><br>
+      \(P(k)  :   {1^2+2^2+...+k^2} = {\frac{k(k+1)(2k+1)}{6}}  \) , \( \forall k \in \mathbb{N} \)<br><br>
+      STEP 3: Now, we need to prove for \( P(k+1) \), when \( n = {k+1} \) . <br><br>
+      So, we add the next term to the L.H.S , the next term is \( {(k+1)^2} \) .<br><br>
+      Also,on the R.H.S, wherever we see \( k \), we put \( (k+1) \) . <br><br>
+      So , R.H.S becomes  \( {\frac{(k+1)(k+1+1)[2(k+1)+1]}{6}} = {\frac{(k+1)(k+2)(2k+3)}{6}}  \)<br><br>
+      So,
+      \(P(k+1)  :   {1^2+2^2+...+k^2+(k+1)^2} = {\frac{(k+1)(k+2)(2k+3)}{6}}  \) <br><br>
+      But recall from STEP 2 that \(P(k)  :   {1^2+2^2+...+k^2} = {\frac{k(k+1)(2k+1)}{6}}  \) <br><br>
+      So, \( P(k+1) \) becomes <br><br>
+      \( P(k+1) : {{\frac{k(k+1)(2k+1)}{6}}+(k+1)^2} = {\frac{(k+1)(k+2)(2k+3)}{6}}  \) <br><br>
+      We need to prove that this is true by showing that L.H.S = R.H.S <br><br>
+      Now, L.H.S \( \implies {{\frac{k(k+1)(2k+1)}{6}}+(k+1)^2} \)<br><br>
+      \(  = {\frac{k+1}{6}}{[{k(2k+1)+6(k+1)}]}  \)<br><br>
+      \(  = {\frac{k+1}{6}}{[2k^2+k+6k+6]} \)<br><br>
+      \(  = {\frac{k+1}{6}}{[2k^2+7k+6]} \)<br><br>
+      \(  = {\frac{k+1}{6}}{[2k^2+4k+3k+6]}\)<br><br>
+      \(  = {\frac{k+1}{6}}{[2k(k+2)+3(k+2)]} \) <br><br>
+      \(  = {\frac{k+1}{6}}{[(2k+3)(k+2)]} \)<br><br>
+      \(  = {\frac{(k+1)(k+2)(2k+3)}{6}} \implies \) R.H.S <br><br>
+      Therefore, \( P(k+1) \) is true whenever \( P(k) \) is true <br><br>
+      Hence, \( P(n) \) is true \( \forall n \in \mathbb{N}  \)<br><br>
+    </p>
+    <br>
+    <p>
+      (6) Use the method of Mathemaical induction to prove that if \( n \) is a positive integer <br><br>
+       \( 2^n > {n} \) <br><br>
+       <u>Solution</u><br><br>
+       Let \( P(n) \) be the statement <br><br>
+       \(  P(n) :  { 2^n > {n} } \)<br><br>
+       STEP 1: we need to show that the statement is true for \( n = 1 \) <br><br>
+       L.H.S <br><br>
+       \( P(1) = 2^1 = 2 \)<br><br>
+       R.H.S \( = 1 \) <br><br>
+       Since \( 2>1 \), we have that \( P(1) \) is true<br><br>
+       STEP 2: Now, we assume \( P(k) \) is true, when \( n = k \). That is <br><br>
+       \(  P(k) :  { 2^k > {k} } \)<br><br>
+       STEP 3: Now, we need to prove for \( P(k+1) \), when \( n = {k+1} \) . <br><br>
+       \(  P(k+1) :  { 2^{k+1} > {k+1} } \)<br><br>
+       We prove this by showing that \( P(k+1) \) is true by showing that L.H.S = R.H.S <br><br>
+       L.H.S \( \implies {2^{k+1}} = {2^k \times 2} \)<br><br>
+       Recall that  \( { 2^k > {k} } \)<br><br>
+       \( \implies  {2^k \times 2} > { k \times 2}  \)<br><br>
+       \( > {k+1} = \) R.H.S <br><br>
+       \( \implies  \)  L.H.S > R.H.S  <br><br>
+       Therefore, \( P(k+1) \) is true whenever \( P(k) \) is true <br><br>
+       Hence, \( P(n) \) is true \( \forall n \in \mathbb{Z^+}  \)<br><br>
+    </p>
+    <br>
+    <p>
+      (7) Prove by induction <br><br>
+      \( {n(n+1)(n+2)}  \) is an integer multiple of \( 6 \)<br><br>
+      <u>Solution</u><br><br>
+      Let \( P(n) \) be the statement <br><br>
+      \( P(n) : {n(n+1)(n+2)}  \) is an integer multiple of \( 6 \)<br><br>
+      STEP 1: we need to show that the statement is true for \( n = 1 \) <br><br>
+      \(  P(1) = {1(1+1)(1+2)} = (6 \times 1)   \)<br><br>
+      This is a multiple of \( 6 \). Hence \( P(1) \) is true. <br><br>
+      STEP 2: Now, we assume \( P(k) \) is true, when \( n = k \). That is <br><br>
+      \( P(k) : {k(k+1)(k+2)} = 6M \) (Where \( M \) is any integer)<br><br>
+      \( \implies {k^3+3k^2+2k} = 6M \)<br><br>
+      \( \implies {k^3} = {6M-3k^2-2k} \)....eq(i)<br><br>
+      Now, we proceed to prove for \( P(k+1) \) <br><br>
+      \( P(k+1) : {(k+1)(k+1+1)(k+1+2)} \) <br><br>
+      \( \implies {(k+1)(k+2)(k+3)} \) <br><br>
+      \( = {(k+3)(k^2+3k+2)}\)<br><br>
+      \( = {k^3+6k^2+11k+6} \) <br><br>
+      \( = {(6M-3k^2-2k)+6k^2+11k+6} \) <br><br>
+      \( = {6M+3k^2+9k+6} \)<br><br>
+      \( = {6[{M+{1 \over 2}(k^2+3k)+1}]} \)<br><br>
+      Which is a multiple of \( 6 \) <br><br>
+      Therefore, \( P(k+1) \) is true whenever \( P(k) \) is true <br><br>
+      Hence, \( P(n) \) is an integer multiple of \( 6 \)<br><br>
+    </p>
+    <br>
+    <p>
+      (8) Prove by induction <br><br>
+      \(  {7^{2n+1}+1} \) is an integer multiple of \( 8 \) <br><br>
+      <u>Solution</u><br><br>
+      Let \( P(n) \) be the statement <br><br>
+      \( P(n) :  {7^{2n+1}+1} \) is an integer multiple of \( 8 \) <br><br>
+      Now, \( P(1) = {7^{2+1}+1} = {7^3+1} = {343+1} = 344 = {8 \times 43}  \)<br><br>
+      \(  \therefore P(1) \) is true.<br><br>
+      Now, we assume \( P(k) \) is true, when \( n = k \) <br><br>
+      \( P(k) : {7^{2k+1}+1} =  {8M} \) (where \( M \) is an integer)<br><br>
+      \(  \implies {7^{2k+1}} = {8M-1}  \) <br><br>
+      Now, \( P(k+1) \) <br><br>
+      \( P(k+1) = {7^{2(k+1)+1}+1} \) <br><br>
+      \( = {7^{2k+3}+1} = {7^{(2k+1)+2}+1} \) <br><br>
+      \(  = {7^{2k+1} \times 7^2 + 1} \)<br><br>
+      \(  = {49(8M-1)+1} = {392M-49+1} = {392M-48} \)<br><br>
+      \(  = {8(49M-6)} \)<br><br>
+      \( \therefore  P(k+1) \)  is true whenever \( P(k) \) is true. <br><br>
+      Hence, \( P(n) \) is an integer multiple of \( 8 \)<br><br>
+    </p>
+    <br>
+    <p>
+      (9) Prove by induction, if \( n \) is a positive integer <br><br>
+      \(  {n(n+1)(2n+1)} \) is a multiple of \( 6 \)<br><br>
+      <u>Solution</u><br><br>
+      Let \( P(n) \) be the statement <br><br>
+      \( P(n) :  {n(n+1)(2n+1)} \) is a multiple of \( 6 \)<br><br>
+      Now, \( P(1) = {1(1+1)(2+1)} = {2 \times 3} = 6 = {6 \times 1} \)<br><br>
+       \( P(1) \) is true. <br><br>
+       Assume \( P(k) \)is true, when \( n = k \) <br><br>
+       \( P(k) :  {k(k+1)(2k+1)}= 6N \) ( \( N \) is any integer )<br><br>
+       \( \implies {2k^3+3k^2+k} = 6N \) <br><br>
+       \( \implies 2k^3 = {6N-3k^2-k} \)<br><br>
+       Now, we need to prove that \( P(k+1) \) is true <br><br>
+       \( P(k+1) : {(k+1)(k+1+1)[2(k+1)+1]} \) <br><br>
+       \(  = {(k+1)(k+2)(2k+3)} = {2k^3+9k^2+13k+6} \)<br><br>
+       \(  = {(6N-3k^2-k)+9k^2+13k+6}  \)<br><br>
+       \(  = {6N+6k^2+12k+6} \) <br><br>
+       \(  = {6(N+k^2+2k+1)} \)<br><br>
+       \( \therefore P(k+1) \) is true whenever \( P(k) \) is true. <br><br>
+       Hence, \( P(n) \) is a multiple of 6. <br><br>
+    </p>
+    <br>
+    <p>
+      (10) Prove by induction , \( \forall n \in \mathbb{Z} \) <br><br>
+      \( {{\frac{1}{1 \times 2}}+{\frac{1}{2 \times 3}}+{\frac{1}{3 \times 4}}+...+{\frac{1}{n \times {(n+1)}}}} = {\frac{n}{n+1}} \) <br><br>
+      <u>Solution</u><br><br>
+      Let \( P(n) \) be the statement <br><br>
+      \( P(n) :  {{\frac{1}{1 \times 2}}+{\frac{1}{2 \times 3}}+{\frac{1}{3 \times 4}}+...+{\frac{1}{n \times {(n+1)}}}} = {\frac{n}{n+1}} \) <br><br>
+      We prove that \( P(1) \) is true. <br><br>
+      Now, on the L.H.S <br><br>
+      \(  P(1) = {\frac{1}{1(1+)1}} = {\frac{1}{1 \times 2}}  = {\frac{1}{2}} \) <br><br>
+      On the R.H.S <br><br>
+      \( P(1) = {\frac{1}{1+1}} = {\frac{1}{2}} \)<br><br>
+      Since L.H.S = R.H.S, \( P(1) \) is true. <br><br>
+      Assume \( P(k) \)is true, when \( n = k \) <br><br>
+      \( P(k) :  {{\frac{1}{1 \times 2}}+{\frac{1}{2 \times 3}}+{\frac{1}{3 \times 4}}+...+{\frac{1}{k \times {(k+1)}}}} = {\frac{k}{k+1}} \) <br><br>
+      Now, we prove that \( P(k+1) \) is true, when \( n = {k+1} \) <br><br>
+      \( P(k+1) :  {{\frac{1}{1 \times 2}}+{\frac{1}{2 \times 3}}+{\frac{1}{3 \times 4}}+...+{\frac{1}{k \times {(k+1)}}}+{\frac{1}{{(k+1)} \times {(k+2)}}}} = {\frac{k+1}{k+2}} \) <br><br>
+      Now, Recall that \(   {{\frac{1}{1 \times 2}}+{\frac{1}{2 \times 3}}+{\frac{1}{3 \times 4}}+...+{\frac{1}{k \times {(k+1)}}}} = {\frac{k}{k+1}} \) <br><br>
+      So, \( P(k+1) \) becomes <br><br>
+      \(  {{\frac{k}{k+1}}+{\frac{1}{{(k+1)} \times {(k+2)}}}} = {\frac{k+1}{k+2}} \)<br><br>
+      Now, L.H.S \( \implies  {{\frac{k}{k+1}}+{\frac{1}{{(k+1)} \times {(k+2)}}}} = {\frac{k(k+2)+1}{(k+1)(k+2)}} \)<br><br>
+      \( =  {\frac{k^2+2k+1}{(k+1)(k+2)}} = {\frac{(k+1)^2}{(k+1)(k+2)}} \)<br><br>
+      \( = {\frac{k+1}{k+2}} \implies  \) R.H.S<br><br>
+      \( \therefore P(k+1) \) is true whenever \( P(k) \) is true. <br><br>
+      Hence, \( P(n) \) is true \(  \forall n \in \mathbb{Z^+} \) <br><br>
+    </p>
+    <br>
+    <p>
+      (11) Prove by induction , \( \forall n \in \mathbb{Z} \) <br><br>
+      \( {3^{4n+2}+ ({2 \times {4^{3n+1}}})}  \)<br><br>
+      is exactly divisible by \( 17 \) <br><br>
+      <u>Solution</u><br><br>
+      Let \( P(n) \) be the statement <br><br>
+      \( P(n) :  {3^{4n+2}+ ({2 \times {4^{3n+1}}})}  \) is exactly divisible by \( 17 \)<br><br>
+      Now, <br><br>
+      \( P(1) = {3^{4+2}+ {2 \times {4^{3+1}}}} \) <br><br>
+      \( = {3^6+({2 \times {4^4}})} \)<br><br>
+      \( = {729 + ({2 \times {256}})} \) <br><br>
+      \( = {729+512} = {1241} = {17  \times 73} \)<br><br>
+      \( P(1) \) is true. <br><br>
+      Assume \( P(k) \)is true, when \( n = k \) <br><br>
+      \( P(k) :  {3^{4k+2}+ ({2 \times {4^{3k+1}}})} = {17N}  \)  ( \( N \in \mathbb{Z} \) )<br><br>
+      \(  \implies  {3^{4k+2}} = {17N-({2 \times 4^{3k+1}})} \)<br><br>
+       Now, we need to prove that \( P(k+1) \) is true when \( n= {k+1} \)<br><br>
+       \( P(k+1) :  {3^{4(k+1)+2}+ ({2 \times {4^{3(k+1)+1}}}) }\)<br><br>
+       \(  =  {({3^{4k+2} \times 3^4})+ [{2 \times ({{4^{3k+1}} \times 4^3})}]} \)<br><br>
+       Recall that \( {3^{4k+2}} = {17N-({2 \times 4^{3k+1}})} \)<br><br>
+       \( \implies   {({3^{4k+2} \times 3^4})+ [{2 \times ({{4^{3k+1}} \times 4^3})}]}  \)<br><br>
+       \( =  { {[{17N-({2 \times 4^{3k+1}})}] \times 3^4} + [{2 \times ({{4^{3k+1}} \times 64})}]}   \)<br><br>
+       \( = { ({3^4 \times 17N}) - ({2 \times 3^4 \times 4^{3k+1}}) + ({128 \times 4^{3k+1}}) } \) <br><br>
+       \( = {1377N - ({162 \times 4^{3k+1}}) + ({128 \times 4^{3k+1}})}  \)<br><br>
+       \( = {1377N - ({34 \times 4^{3k+1}})}  \) <br><br>
+       \( = {17[{81N - ({2 \times 4^{3k+1}})}]} \) (This is a multiple of 17)<br><br>
+       \( \therefore P(k+1) \) is true whenever \( P(k) \) is true. <br><br>
+       Hence \( P(n) \)is true<br><br>
+    </p>
+    <br>
+    <p>
+      (12) Prove that \( { 6^n - 1} \) is a multiple of \( 5 \) for all values of \( n \)<br>
+      using the principle of Mathematical Induction. <br><br>
+      <u>Solution</u><br><br>
+      Let \( P(n) \) be the statement <br><br>
+      \( P(n) :  { 6^n - 1} \) is a multiple of \( 5 \) <br><br>
+      Now, \( P(1) = {6^1-1} = {6-1} = 5 = {5 \times 1} \)<br><br>
+      \( \therefore P(1) \) is true. <br><br>
+      Assume \( P(k) \) is true <br><br>
+      \( P(k) :  { 6^k - 1} = 5M \) , \( M \in \mathbb{Z^+} \) <br><br>
+      \( \implies 6^k = {5M+1} \)<br><br>
+      Next, we prove that  \( P(k+1) \) is true, when \( n = (k+1) \)<br><br>
+      \(  P(k+1) : {6^{k+1}-1} = {(6 \times 6^k)-1}  \)<br><br>
+      Recall that \( 6^k = {5M+1} \)<br><br>
+      \( \implies P(k+1)  =  {6[5M+1]-1} =  {30M+6-1} \)<br><br>
+      \( = {30M+5} = {5(6M+1)}  \) which is a multiple of 5. <br><br>
+      \( \therefore P(k+1) \) is true whenever \( P(k) \) is true. <br><br>
+      Hence \( P(n) \)is true \(  \forall n \in \mathbb{Z^+}\)<br><br>
+    </p>
+    <br>
+    <p>
+      (13) Show that \(   {{18}^n-1}  \) is exactly divisible by \( 17 \) , if \( n \) is a positive integer <br><br>
+      <u>Solution</u><br><br>
+      Let \( P(n) \) be the statement <br><br>
+      \( P(n) :   {{18}^n-1}  \) is exactly divisible by \( 17 \)<br><br>
+      Now, \( P(1) = {{18}^1-1} = {18-1} = 17 = {17 \times 1}  \)<br><br>
+      \( \therefore P(1) \) is true. <br><br>
+      Assume \( P(k) \) is true <br><br>
+      \( P(k) :   {{18}^k-1} = 17N \) , \( n \in \mathbb{Z^+} \)<br><br>
+      \( \implies {18}^k = {17N+1} \) <br><br>
+      Next, we prove that  \( P(k+1) \) is true, when \( n = (k+1) \)<br><br>
+      \( P(k+1) :   {{18}^{k+1}-1} \) <br><br>
+      \(  = {(18 \times {18}^k)-1} \)<br><br>
+      Recall that \( {18}^k = {17N+1} \) <br><br>
+      \( \implies  P(k+1)  = {18[{17N+1}]-1} = {(18 \times 17N)+18-1} \)<br><br>
+      \(  = {(18 \times 17N)+17} = {17[18N+1]} \) which is a multiple of \( 17 \).<br><br>
+      \( \therefore P(k+1) \) is true whenever \( P(k) \) is true. <br><br>
+      Hence \( P(n) \)is true \(  \forall n \in \mathbb{Z^+}\)<br><br>
+    </p>
+    <br>
+    <p>
+      (14) Prove that for all positive integer values of \( n \), <br><br>
+      \( {5^{2n}+3n-1} \)<br>
+      ia an integer multiple of \( 9 \). <br><br>
+      <u>Solution</u><br><br>
+      Let \( P(n) \) be the statement <br><br>
+      \( P(n)  :  {5^{2n}+3n-1} \)<br>
+      ia an integer multiple of \( 9 \). <br><br>
+      Now, \( P(1) =  {5^2+3-1} = {25+2} = 27 = {9 \times 3} \) <br><br>
+      \( \therefore P(1) \) is true. <br><br>
+      Assume \( P(k) \) is true <br><br>
+      \( P(k)  :  {5^{2k}+3k-1} = 9M \) , \( M \in \mathbb{Z^+} \)<br>
+      \( \implies 5^{2k} = {9M-3k+1}  \) <br><br>
+        Next, we prove that  \( P(k+1) \) is true, when \( n = (k+1) \)<br><br>
+        \( P(k+1) :  {5^{2(k+1)}+3(k+1)-1}  \) <br><br>
+        \(  =  {5^{2k+2}+3k+3-1} = {(5^2 \times 5^{2k})+3k+2}  \) <br><br>
+        Recall that \( 5^{2k} = {9M-3k+1}  \) <br><br>
+        \( \implies P(k+1) =  {25[9M-3k+1]+3k+2} \) <br><br>
+        \(  = {( 9 \times 25M)-75k+25+3k+2} = { ( 9 \times 25M)-72k+27 } \)<br><br>
+        \(  = {9[25M-8k+3]}  \) <br><br>
+        \( \therefore P(k+1) \) is true whenever \( P(k) \) is true. <br><br>
+        Hence \( P(n) \)is true \(  \forall n \in \mathbb{Z^+}\)<br><br>
+    </p>
+    <br>
+    <p>
+      (15) Prove that <br>
+      \( {n^4+4n^2+11} \) is a multiple of \( 6 \) for all odd positive integers. <br><br>
+      <u>Solution</u><br><br>
+      Let \( P(n) \) be the statement <br><br>
+      \( P(n)  :  {n^4+4n^2+11} \) is a multiple of \( 6 \) for all odd positive integers. <br><br>
+      Now, \( P(1) = {1+4+11} = 16 = {16 \times 1} \)<br><br>
+      \( \therefore P(1) \) is true. <br><br>
+      Assume \( P(k) \) is true <br><br>
+      \( P(k)  :  {k^4+4k^2+11} = 16M \) ( \(M \in \mathbb{Z^+} \) )<br><br>
+      \( \implies k^4 = {16M-4k^2-11} \)<br><br>
+      Since \( n \) is odd, we need to prove that \( P(k+2) \) is true, when \( n = (k+2) \)<br><br>
+      \( P(k+2)  :  {(k+2)^4+4(k+2)^2+11}  \) <br><br>
+      \(  = {k^4+8k^3+24k^2+32k+16+4(k^2+4k+4)+11} \) <br><br>
+      \(  = {k^4+8k^3+28k^2+48k+43} \) <br><br>
+      Recall that \( k^4 = {16M-4k^2-11} \)<br><br>
+      \( \implies P(k+1) = { [{16M-4k^2-11}]+8k^3+28k^2+48k+43 }    \)<br><br>
+      \(  = {16M+8k^3+24k^2+48k+32}  \)<br><br>
+      \(  = {16[M+{1 \over 4}(2k^3+3k^2)+3k+2]}  \)<br><br>
+      \( \therefore P(k+2) \) is true whenever \( P(k) \) is true. <br><br>
+      Hence, \( P(n) \) is true \( \forall \) odd positive integers. <br><br>
+    </p>
+    <br>
+    <p>
+      <u><h3>Exercises</h3></u><br><br>
+      Use the principle of Mathematical Induction to prove that <br><br>
+      (1) \(  {n(n^2+5)}  \) is divisible by \( 6 \) , for each natural number \( n \).<br><br>
+      (2) \(  {n^3-n}  \) is divisible by \( 6 \) for each natural number \( n \ge 2  \). <br><br>
+      (3) For any natural number \( n \), \( {7^n-2^n}  \)is divisible by \( 5 \). <br><br>
+      (4) \(  {1+5+9+...+(4n-3)} = {n(2n-1)} \) for all natural number \( n \). <br><br>
+      (5) \(  {1+2+2^2+...+2^n} = {2^{n+1}-1} \) for all natural numbers \( n \). <br><br>
+    </p>
+  </body>
+</html>

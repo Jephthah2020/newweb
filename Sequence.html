@@ -1,0 +1,553 @@
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width" initial-scale=>
+    <link rel="stylesheet" href="style.css">
+
+    <title></title>
+  </head>
+  <body style ="text-align:center;">
+  <p>
+    <h3><b>SEQUENCE & SERIES</b></h3>
+     <br><br>
+     A sequence is a set of numbers in some definite order, <br><br>
+     the successive terms of the  sequence being formed according to some rules <br><br>
+     Generally, we denote the \( \displaystyle{r^{th}} \) term of a sequence by \( \displaystyle{U_r} \). <br><br>
+     For example, the sequence <br><br>
+     \( \displaystyle{2,4,6,8,10, \cdots} \) <br><br>
+     canbe denoted by \( \displaystyle{U_r} \). But how can we find \( \displaystyle{U_r} \)? <br><br>
+     By inspection, we see that in the sequence <br><br>
+     \( \displaystyle{2,4,6,8,10, \cdots} \) <br><br>
+     the terms can be written as <br><br>
+     \( \displaystyle{{2 \times 1},{2 \times 2},{2 \times 3},{2 \times 4},{2 \times 5}, \cdots} \)<br><br>
+     Therefore, \( \displaystyle{U_r = 2r} \) where \( \displaystyle{r \in \mathbb{Z^+}} \) (positive integer) <br><br>
+     <br>
+     <b><u>Series</u></b>: A series is obtained by forming from the sum of the terms of a sequence. <br><br>
+     A finite series is obtained if a finite number of terms of the sequence are summed. <br><br>
+     We denote the sum of the first \( n \) terms ofa sequence by \( \displaystyle{S_n} \), where <br><br>
+     \( \displaystyle{S_n = u_1+u_2+u_3+ \cdots u_n} \) <br><br>
+     or we write <br><br>
+     \( \displaystyle{\sum\limits_{r=1}^{n}u_r = u_1+u_2+u_3+ \cdots u_n } \) <br><br>
+     <u><b>Note</b></u>( \( \displaystyle{ \sum \limits_{r=1}^{n}} \) means summation from \( r=1 \) to \( r=n \) )  <br><br>
+     <u><b>Examples</b></u> <br><br>
+     (1) Find a formula for \( \displaystyle{U_r} \) for the sequences <br><br>
+     (a) \( \displaystyle{1,8,27,64,125, \cdots} \)<br><br>
+     (b) \( \displaystyle{1,-4, 9, -16, 25, \cdots } \) <br><br>
+     (c) \( \displaystyle{{1 \over 2}, 2 , 8 , 32, 128, \cdots} \) <br><br>
+     <br>
+     <u><b>Solution</b></u> <br><br>
+     (a) \( \displaystyle{1,8,27,64,125, \cdots} \)<br><br>
+     By inspection, the terms can be terms can be written as <br><br>
+     \( \displaystyle{1^3, 2^3, 3^3, 4^3, 5^3, \cdots } \)<br><br>
+     \( \displaystyle{\therefore U_r = r^3} \) <br><br>
+     (b) \( \displaystyle{1,-4, 9, -16, 25, \cdots } \) <br><br>
+     By inspection, the terms can be written as  <br><br>
+     \( \displaystyle{{(-1)^{1+1}(1)^2},{(-1)^{2+1}(2)^2},{(-1)^{3+1}(3)^2},{(-1)^{4+1}(4)^2}, \cdots } \) <br><br>
+     \( \displaystyle{\therefore U_r = {(-1)^{r+1}r^2}} \) <br><br>
+     <br>
+     (c) \( \displaystyle{{1 \over 2}, 2 , 8 , 32, 128, \cdots} \) <br><br>
+     By inspection, the terms can be written as <br><br>
+     \( \displaystyle{{{1 \over 2} \times 1},{{1 \over 2} \times 4},{{1 \over 2} \times {16}},{{1 \over 2} \times {64}},{{1 \over 2} \times {256}}, \cdots } \)<br><br>
+     This can be written as <br><br>
+     \( \displaystyle{{{1 \over 2} \times {(4)^{1-1}}},{{1 \over 2} \times {(4)^{2-1}}},{{1 \over 2} \times {(4)^{3-1}}},{{1 \over 2} \times {(4)^{4-1}}},{{1 \over 2} \times {(4)^{5-1}}}, \cdots } \)<br><br>
+     \( \displaystyle{\therefore U_r = {({1\over 2})4^{r-1}}} \) <br><br>
+     <br>
+
+  </p>
+  <br>
+  <p>
+    <b><u>Example</u></b> <br><br>
+    Evaluate the first \( 5 \) terms of the sequence whose \( r^{th} \) terms ( \( U_r \) ) are <br><br>
+    (a) \( \displaystyle{3r-1} \) <br><br>
+    (b) \( \displaystyle{\left(-{\frac{1}{3}}\right)^{r-1}} \) <br><br>
+    (c) \( \displaystyle{2^r + r^2} \) <br><br>
+  </p>
+  <br>
+  <p>
+  <u><b>Solution</b></u> <br><br>
+  (a) \( \displaystyle{3r-1} \) <br><br>
+  \( \displaystyle{\therefore {U_1 =2},{U_2 = 5},{U_3 = 8},{U_4 = 11}, {U_5= 14}} \) <br><br>
+  \( \displaystyle{\sum \limits_{r=1}^{5}U_n = U_1+U_2+U_3+U_4+U_5} \) <br><br>
+  \( \displaystyle{\implies {2+5+8+11+14}} \) <br><br>
+  \( \displaystyle{\implies 40} \) <br><br>
+  The sum of the series is \( 40 \) (This is just an example, we are not told to find the sum) <br><br>
+  The first five terms are <br><br>
+  \( \displaystyle{2,5,8,11,14} \) <br><br><br>
+  (b) \( \displaystyle{\left(-{\frac{1}{3}}\right)^{r-1}} \) <br><br>
+  \( \displaystyle{ U_r = \left(-{\frac{1}{3}}\right)^{r-1}} \) <br><br>
+  \( \displaystyle{\implies U_1 = \left(-{\frac{1}{3}}\right)^{1-1} = {\left(-{1 \over 3}\right)^0 =1}} \) <br><br>
+  \( \displaystyle{\implies U_2 = \left(-{\frac{1}{3}}\right)^{2-1} = {\left(-{1 \over 3}\right)^1 = -{1 \over 3}}} \) <br><br>
+  \( \displaystyle{\implies U_3 = \left(-{\frac{1}{3}}\right)^{3-1} = {\left(-{1 \over 3}\right)^2 ={1 \over 9}}} \) <br><br>
+  \( \displaystyle{\implies U_4 = \left(-{\frac{1}{3}}\right)^{4-1} = {\left(-{1 \over 3}\right)^3 = -{1 \over {27}}}} \) <br><br>
+  \( \displaystyle{\implies U_5 = \left(-{\frac{1}{3}}\right)^{5-1} = {\left(-{1 \over 3}\right)^4 ={1 \over {81}}}} \) <br><br>
+  The first five terms are <br><br>
+  \( \displaystyle{1,-{1 \over 3},{1 \over 9},-{1 \over {27}},{1 \over {81}}} \) <br><br>
+  (c) \( \displaystyle{2^r + r^2} \) <br><br>
+  \( \displaystyle{U_1 = 2^1 + 1^2 = 2+1 = 3} \) <br><br>
+  \( \displaystyle{U_2 = 2^2 + 2^2 = 4+4 = 8} \) <br><br>
+  \( \displaystyle{U_3 = 2^3 + 3^2 = 8+9 = 17} \) <br><br>
+  \( \displaystyle{U_4 = 2^4 + 4^2 = 16+16 = 32} \) <br><br>
+  \( \displaystyle{U_5 = 2^5 + 5^2 = 32+25 = 57} \) <br><br>
+  \( \displaystyle{\therefore } \) the first 5 terms are <br><br>
+  \( \displaystyle{3,8,17,32,57} \)<br><br>
+  </p>
+  <br>
+  <p>
+    <b><u>Example</u></b> <br><br>
+    If \( U_1 = -1, U_2 = -5 \) and \( U_r=a+br \), find \( a,b \) and \( U_5 \). <br><br>
+    <u><b>Solution</b></u> <br><br>
+    given that \( \displaystyle{U_1 =-1} \) and \( \displaystyle{U_2 = -5} \) <br><br>
+    From \( \displaystyle{U_r= a+br} \) , we have <br><br>
+    \( \displaystyle{U_1 = a+b = -1} \) <br><br>
+    \( \displaystyle{U_2 = a+2b= -5} \) <br><br>
+    subtracting (2) from (1) <br><br>
+    \( \displaystyle{-b = 4 \implies b= -4} \) <br><br>
+    Substituting \( -4\) for \( b \) in (1)<br><br>
+    \( \displaystyle{a = -1-b} \) <br><br>
+    \( \displaystyle{\implies a = {-1+4} = 3} \) <br><br>
+    \( \displaystyle{\therefore a=3, b= -4} \) <br><br>
+    Now, \( \displaystyle{U_5 = a+5b = 3+5(-4)} \) <br><br>
+    \( \displaystyle{= 3-20 = -17} \) <br><br>
+  </p>
+  <br>
+  <p>
+    <b><u>Example</u></b> <br><br>
+    \( \displaystyle{U_1=0, U_2=3, U_3=12} \) and \( \displaystyle{U_r = a+br+cr^2} \), find \( \displaystyle{a,b,c} \) and <br><br>
+    (a) \( \displaystyle{ \sum \limits_{r=1}^{5}U_r} \) <br><br>
+    (b) \( \displaystyle{ \sum \limits_{r=4}^{7}U_r} \) <br><br>
+    (2) Evaluate <br><br>
+    (a) \( S_8 \) for the series \( \displaystyle{1+3+6+9+12+ \cdots} \) <br><br>
+    (b) \( S_5 \) for the series \( \displaystyle{3+9+27+81+ \cdots } \) <br><br>
+    <br>
+    <u><b>Solution</b></u> <br><br>
+    (1) Given that \( \displaystyle{U_1= 0, U_2=3, U_3= 12} \) <br><br>
+    Since \( \displaystyle{U_r = a+br+cr^2} \) <br><br>
+    \( \displaystyle{U_1 = {a+b+c} = 0} \cdots \)  (1) <br><br>
+    \( \displaystyle{U_2 = {a+2b+4c3} = 3} cdots \) (2)<br><br>
+    \( \displaystyle{U_3 = {a+3b+4c} = 12} \cdots \) (3)<br><br>
+    Subtracting (1) from (2), and subtracting (1) from (3) <br><br>
+    \( \displaystyle{b+3c=3} \cdots \) (4) <br><br>
+    \( \displaystyle{2b+8c=12} \cdots \) (5) <br><br>
+    \( \displaystyle{eqq(4) \times 2 : 2b+6c = 6} \cdots \) (6) <br><br>
+    \( \displaystyle{eqq(5) \times 1 : 2b+8c = 12} \cdots \) (7) <br><br>
+    Subtracting (6) from (7) <br><br>
+    \( \displaystyle{2c = 6 \implies c=3} \)<br><br>
+    it follows that \( \displaystyle{a=3, b=-6, c=3} \) <br><br>
+    \( \displaystyle{\therefore U_1 = 0} \) <br><br>
+    \( \displaystyle{U_2 = 3} \) <br><br>
+    \( \displaystyle{U_3 = 12} \) <br><br>
+    \( \displaystyle{U_r = 3-6r+3r^2} \) <br><br>
+    \( \displaystyle{U_4 = 3-6(4)+3(4^2) = 27} \) <br><br>
+    \( \displaystyle{U_5 = 3-5(5)+3(5^2) = 48} \) <br><br>
+    \( \displaystyle{U_6 = 3-6(6)+3(6^2) = 75} \) <br><br>
+    \( \displaystyle{U_7 = 3-6(7)+3(7^2) = 108}  \) <br><br>
+    (a)  \( \displaystyle{ \sum \limits_{r=1}^{5}U_r = U_1+U_2+U_3+U_4+U_5} \) <br><br>
+    \( \displaystyle{\implies 0+3+12+27+48 = 90} \) <br><br>
+     \( \displaystyle{ \sum \limits_{r=1}^{5}U_r = 90} \) <br><br>
+     (b) \( \displaystyle{ \sum \limits_{r=4}^{7}U_r = U_4+U_5+U_6+U_7} \) <br><br>
+     \( \displaystyle{\implies 27+48+75+108 = 258} \) <br><br>
+     \( \displaystyle{ \sum \limits_{r=4}^{7}U_r = 258} \) <br><br><br>
+     (2) (a) The series \( \displaystyle{1+3+6+9+12+ \cdots} \)<br><br>
+     This is \( \displaystyle{1,3,6,9,12,15,18, \cdots} \)<br><br>
+     Since \( \displaystyle{S_n = U_1+U_2+ \cdots + U_n} \) <br><br>
+     \( \displaystyle{S_8 = U_1+U_2+U_3+ \cdots + U_7 +U_8} \) <br><br>
+     \( \displaystyle{= 1+3+6+9+12+15+18+21 =85} \) <br><br>
+     (b) The series \( \displaystyle{3+9+27+81+ \cdots } \) <br><br>
+     This is \( \displaystyle{3,9,27,81,243,729, \cdots } \) <br><br>
+     \( \displaystyle{S_5 = 3+9+27+81+243 = 363} \) <br><br>
+  </p>
+  <br>
+  <p>
+    <b><u> Arithmetric Progression(A.P)</u></b> <br><br>
+    An arithmetic series is defined by its first term and common <br><br>
+     difference denoted by \( a \) and \( d \) respectively. <br><br>
+    The general Arithmetic sequence is <br><br>
+    \( \displaystyle{a, a+d, a+2d, a+3d, a+4d, \cdots , a+(n-1)d, \cdots} \) <br><br>
+    In generaL, the \( nth \) term of an Arithmetic progression is given by <br><br>
+    \( \displaystyle{U_n = a+(n-1)d} \) <br><br>
+    The sum of the first n terms of an Arithmetic progerssion is given by <br><br>
+    \( \displaystyle{S_n = \frac{n}{2}[2a+(n-1)d]} \) <br><br>
+    Or <br><br>
+    \( \displaystyle{S_n = {n \over 2}[a+l]} \) <br><br>
+    where \( a \) is the first term, <br><br>
+    \( d \) is the common difference, <br><br>
+    \( l \) is the last term. <br><br>
+  </p>
+  <br>
+  <p>
+    <u><b>Examples</b></u> <br><br>
+    (1). Find \( 12 \) Arithmetic means between \( -5 \) and \( 60 \). <br><br>
+    <u><b>Solution</b></u> <br><br>
+    <br>
+    Given that the first term is \( -5 \) and the \( nth \) term is \( 60 \). <br><br>
+    we are asked to find \( 12 \) arithmetic means between them. <br><br>
+    This shows that the A.P has \(14 \) terms, where <br><br>
+     the first term is \( -5 \) and the last term is \( 60 \). <br><br>
+     Now, the first term \( \displaystyle{U_1 = a = -5} \) <br><br>
+     The \( 14th \) term \( \displaystyle{U_{14} = a+13d = 60} \) <br><br>
+     We have two equations <br><br>
+     \( \displaystyle{a = -5} \) (1) <br><br>
+     \( \displaystyle{a+13d = 60} \)(2) <br><br>
+     This gives \( \displaystyle{d = 5} \) <br><br>
+     Since \( \displaystyle{U_n = a+(n-1)d} \), the arithmetic means are <br><br>
+     \( \displaystyle{0,5,10,15,20,25,30,35,40,45,50,55} \) <br><br>
+     <br>
+     (2) Find three numbers in A.P whose sum is \( 3 \) and whose product is \( -15 \) <br><br>
+     <b><u>Solution</u></b> <br><br>
+     Let the numbers be \( \displaystyle{a-d, a, a+d} \)<br><br>
+     Given that the sum is \( 3 \) and the product is \( -15 \), <br><br>
+     we have <br><br>
+     \( \displaystyle{(a-d)+a+(a+d)= 3} \) <br><br>
+     \( \displaystyle{\implies 3a = 3 \implies a=1} \) <br><br>
+     Also, the product <br><br>
+     \( \displaystyle{a(a-d)(a+d)= -15} \) <br><br>
+     \( \displaystyle{\implies a(a^2-d^2) = -15} \) <br><br>
+     \( \displaystyle{\implies a^3-ad^2 = -15} \) <br><br>
+     Since \( a =1 \) , we have <br><br>
+     \( \displaystyle{1-d^2 =-15} \) <br><br>
+     \( \displaystyle{\implies d^2 = 18} \)<br><br>
+     \( \displaystyle{\implies d= \sqrt{16}= 4} \). <br><br>
+     So, \( \displaystyle{a=1, d=4} \) <br><br>
+     The numbers are \( \displaystyle{a-d, a, a+d, } \) , that is <br><br>
+     \( \displaystyle{-3, 1 , 5} \) <br><br>
+  </p>
+  <br>
+  <p>
+    (3) The first term of an Arithmetic Progression is \( 7 \), the last term is \( 70 \) , and the sum is \( 385 \) . <br><br>
+    Find the number of terms in the series and the common difference. <br><br>
+    <u><b>Solution</b></u> <br><br>
+    \( \displaystyle{a=7} \) <br><br>
+    \( \displaystyle{l = 70} \) <br><br>
+    \( \displaystyle{S_n = 385} \) <br><br>
+    To find the number of terms, \( n \) , we use the formula <br><br>
+    \( \displaystyle{S_n = {n \over 2}[a+l]} \) <br><br>
+    \( \displaystyle{\implies 385 = {n \over 2}[7+70]} \) <br><br>
+    \( \displaystyle{770 = 77n} \)<br><br>
+    \( \displaystyle{n = 10} \)<br><br>
+    So, there are \( 10 \) terms in the series . <br><br>
+    To find the common difference d,  <br><br>
+    \( \displaystyle{U_n = a+(n-)d} \) <br><br>
+    \( \displaystyle{\implies U_{10} = 70 = 7+9d} \) <br><br>
+    \( \displaystyle{\implies 9d+7 = 70} \)<br><br>
+    \( \displaystyle{9d = 63} \) <br><br>
+    \( \displaystyle{d = 7} \) <br><br>
+    \( \displaystyle{\therefore d=7 , n=10} \)<br><br>
+  </p>
+  <br>
+  <p>
+    <u><b>Example</b></u> <br><br>
+    (1) Find the sum of the first \( n \) terms  of the series <br><br>
+    \( \displaystyle{-1+(-3)+(-5)+(-7)+ \cdots } \) <br><br>
+    (2) The third term of an arithmetic progression is\( 18 \), the seventh term is \( 30 \).<br><br>
+    Find the sum of the first \( 33 \) terms. <br><br>
+    (3) Evaluate <br><br>
+    (i) \( \displaystyle{ \sum \limits_{r=1}^{8} }(3r+2) \) <br><br>
+    (ii) \( \displaystyle{ \sum \limits_{r=1}^{n} }(5r-7) \) <br><br>
+    (iii) \( \displaystyle{ \sum \limits_{r=1}^{n} }(2-3r) \) <br><br>
+    <u><b>Solution</b></u> <br><br>
+    (1)The series \( \displaystyle{-1+(-3)+(-5)+(-7)+ \cdots } \) <br><br>
+    has \( -1 \) as the first term. <br><br>
+    \( \displaystyle{U_1 = a = -1} \) <br><br>
+    \( \displaystyle{U_2 = a+d = -3} \) <br><br>
+    \( \displaystyle{\implies d= -2} \) <br><br>
+    The sum of the first \( n \) terms is <br><br>
+    \( \displaystyle{S_n = {n \over 2}[-2+(n-1)(-2)]} \) <br><br>
+    \( \displaystyle{\implies {n \over 2}[-2-2n+2]} \)<br><br>
+    \( \displaystyle{\implies {n \over 2}[-2n]} \) <br><br>
+    \( \displaystyle{\implies {S_n = -n^2}} \) <br><br><br>
+    (2) The third term, \( \displaystyle{U_3 = a+2d =18} \) <br><br>
+    The seventh term, \( \displaystyle{U_7= a+6d= 30} \) <br><br>
+    subtractind (1) from (2)
+    \( \displaystyle{ 4d = 12} \) <br><br>
+    \( \displaystyle{d = 3} \)<br><br>
+    \( \displaystyle{\implies a=12} \) <br><br>
+    The sum of the first \( 33 \)terms \( S_{33} \) is <br><br>
+    \( \displaystyle{S_n= {n \over 2}[2a+(n-1)d]} \) <br><br>
+    \( \displaystyle{\implies S_{33} = \frac{33}{2}[2(12)+32(3)]} \)<br><br>
+    \( \displaystyle{\implies {\frac{33}{2}[24+96]}} \) <br><br>
+    \( \displaystyle{\implies {\frac{33}{2}[120]}} \) <br><br>
+    \( \displaystyle{\implies {{33} \times {60} } = 1980} \) <br><br>
+    <br>
+    (3) (i) \( \displaystyle{ \sum \limits_{r=1}^{8} }(3r+2) \) <br><br>
+    We get the first term when \( r = 1 \) <br><br>
+    \( \displaystyle{U_1 = 3+2 = 5} \) <br><br>
+    \( \displaystyle{U_2 = 3(2) + 2 = 8} \) <br><br>
+    \( \displaystyle{\therefore a=5, d=3} \) <br><br>
+    \( \displaystyle{S_8 = {8 \over 2}[2(5)+7(3)]} \) <br><br>
+    \( \displaystyle{= 4[10+21] = 4[31] =124} \) <br><br><br>
+    (ii) \( \displaystyle{ \sum \limits_{r=1}^{n} }(5r-7) \) <br><br>
+    Here, \( \displaystyle{U_r =5r-7 = -2} \) <br><br>
+    \( \displaystyle{U_1 = 5-7 =-2} \) <br><br>
+    \( \displaystyle{U_2 = 5(2)-7 = 3} \)<br><br>
+    \( \displaystyle{U_3 = 5(3)-7 = 8} \) <br><br>
+    \( \displaystyle{\therefore a= -2, d =5} \) <br><br>
+    \( \displaystyle{S_n = \sum \limits_{r=1}^{n}(5r-7)} \) <br><br>
+    \( \displaystyle{= {n \over 2}[2(-2)+(n-1)5]} \) <br><br>
+    \( \displaystyle{= {n \over 2}[-4+5n-5]} \) <br><br>
+    \( \displaystyle{= {n \over 2}[5n -9]} \) <br><br>
+    \( \displaystyle{S_n = {1 \over 2}[5n^2-9n]} \) <br><br><br>
+    (iii) \( \displaystyle{\sum \limits_{r=1}^{n}(2-3r)} \) <br><br>
+    \( \displaystyle{U_r = 2-3r} \) <br><br>
+    \( \displaystyle{U_1 = a = 2-3 = -1} \) <br><br>
+    \( \displaystyle{U_2 = a+d = 2-6 = -4} \) <br><br>
+    \( \displaystyle{U_3 = a+2d = 2-9 = -7} \) <br><br>
+    \( \displaystyle{\therefore d=-3,a=-1} \) <br><br>
+    \( \displaystyle{\sum \limits_{r=1}^{n}(2-3r)} \) <br><br>
+    \( \displaystyle{\implies S_n = {n \over 2}[2+(n-1)(-3)]} \) <br><br>
+    \( \displaystyle{\implies {n \over 2}[1-3n]} \) <br><br>
+    \( \displaystyle{S_n = {1 \over 2}[n-3n^2]} \) <br><br><br>
+
+  </p>
+  <br>
+  <p>
+    <h3><b><u>Geometric Progression(G.P)</u></b></h3>
+    <br><br>
+    A geometric sequence is completely defined byits first term denoted <br><br>
+    by \( a \) , and the common ratio denoted by \( r \). <br><br>
+    The general geometric sequence is <br><br>
+    \( \displaystyle{a,ar,ar^3,ar^3, \cdots , ar^{n-1}} \) <br><br>
+    So, the \( nth \)term ofthe sequence is given by <br><br>
+    \( \displaystyle{U_n = ar^{n-1}} \) <br><br>
+    The sum of the first \( n \) terms ofa geometric sequence is given by <br><br>
+    \( \displaystyle{S_n = \frac{a(1-r^n)}{1-r}} \) , if \( r <1 \) <br><br>
+      Or <br><br>
+      \( \displaystyle{S_n = \frac{a(r^n-1)}{r-1}} \) , if \( r>1 \) <br><br>
+      <br>
+      <u><b>Examples</b></u> <br><br><br>
+      (1) Find three numbers in geometric progression whose sum is \( 13 \) and whose product is \( -64 \) <br><br>
+      (2)The product of three numbers in geometric progression is \( 1 \) , their sum is \( \displaystyle{-{7 \over 3}} \) . Find the numbers.<br><br>
+      (3) Find \( 3 \) geometric means between \( 5 \) and \( 80 \) . <br><br>
+      (4)The third term of a geometric sequence is \(-1 \) and the seventh term is \( -81 \). Find the ninth term. <br><br>
+      (5) Find the sum of the first \( 8 \) terms of the series <br><br>
+      \( \displaystyle{{1 \over 2}+{1 \over 3}+{2 \over 9}+ \cdots } \) <br><br><br>
+      <u><b>Solution</b></u> <br><br><br>
+      (1) Let the three numbers be \( \displaystyle{{ar^{-1}},a,{ar}} \) <br><br>
+      Since their sum is 13, we have <br><br>
+      \( \displaystyle{{a \over r}+a+ar = 13} \) <br><br>
+      multiplying through by \( r \), we have <br><br>
+      \( \displaystyle{a+ar+ar^2 =13r} \) <br><br>
+      Their product is \( -64 \) <br><br>
+      \( \displaystyle{\implies {({a \over r})(a)(ar) = -64}} \) <br><br>
+      \( \displaystyle{\implies a^3 = -64} \) <br><br>
+      \( \displaystyle{\implies {a^3 = (-4)^3}} \) <br><br>
+      \( \displaystyle{\implies a= -4} \) <br><br>
+      Substituting \( -4 \) for \( a \) in the equation above, we have <br><br>
+       \( \displaystyle{-4-4r-4r^2 = 13r} \) <br><br>
+       \( \displaystyle{\implies 4r^2+17r+4 = 0} \) <br><br>
+       \( \displaystyle{\implies (4r+1)(r+4) =0} \) <br><br>
+       \( \displaystyle{\implies r= -{ 1 \over 4}} \) or \( \displaystyle{r =-4} \) <br><br>
+       If \( \displaystyle{r = -{ 1 \over 4}, {a \over r} = 16, ar = 1, } \) <br><br>
+       The numbers will be \( \displaystyle{16, -4, 1} \) <br><br>
+       If \( \displaystyle{r= -4 ,  {a \over r} = 1, ar=16} \) <br><br>
+       The numbers will be \( \displaystyle{1, -4 , 16} \) <br><br>
+       <br>
+       (2) Let the numbers be \( \displaystyle{{a \over r}, a, ar} \) <br><br>
+       Their sum is \( \displaystyle{-{7 \over 3}} \), that is <br><br>
+       \( \displaystyle{{a \over r}+a+ar = -{7 \over 3}} \) <br><br>
+       \( \displaystyle{\implies 3a+3ar+3ar^2 = -7r} \cdots \) (1) <br><br>
+       Their product is equal to \( 1 \), that is <br><br>
+       \( \displaystyle{\left({a \over r}\right)(a)(ar) = 1} \) <br><br>
+       \( \displaystyle{\implies {a^3=1}} \) <br><br>
+       \( \displaystyle{\implies a=1} \) <br><br>
+       Substituting \( \displaystyle{a=1} \) into (1) <br><br>
+       \( \displaystyle{3+3r+3r^2 =-7r} \) <br><br>
+       \( \displaystyle{\implies {3r^2+10r+3=0}} \)<br><br>
+       \( \displaystyle{\implies {(3r+1)(r+3) = 0}} \) <br><br>
+       \( \displaystyle{\implies {r=-{1 \over 3}}} \) or \( \displaystyle{r= -3} \) <br><br>
+       We choose \( \displaystyle{r= -3} \) <br><br>
+       the first number \( \displaystyle{{a \over r} = {1 \over {-3}} = -{1 \over 3}} \) <br><br>
+       the second number \( \displaystyle{a =1} \) <br><br>
+       the third number \( \displaystyle{ar = 1(-3) = -3} \) <br><br>
+       \( \displaystyle{\therefore} \) the numbers are \( \displaystyle{-{1\over 3}, 1, -3} \) <br><br><br>
+       (3) To find \( 3 \) geometric means between \( 5 \) and \( 80 \). <br><br>
+       here, the first term of the G.P is \( 5 \) <br><br>
+       the last term is \( 80 \) . <br><br>
+       There are \( 3 \) geometric means between them, which means <br><br>
+       The number of terms, \( \displaystyle{n = 5} \) <br><br>
+       Now <br><br>
+       \( \displaystyle{U_1 =a= 5} \cdots (1) \) <br><br>
+       \( \displaystyle{U_5 =ar^4 = 80 } \cdots (2)\) <br><br>
+       dividing (2) by (1), we have <br><br>
+       \( \displaystyle{r^4 = 16} \) <br><br>
+       \( \displaystyle{\implies r^4 = 2^4} \) <br><br>
+       \( \displaystyle{\therefore r=2} \) <br><br>
+       So, \( \displaystyle{a=5, r=2} \) <br><br>
+       The geometric means are \( \displaystyle{ar, ar^2, ar^3} \) <br><br>
+       That is , \( \displaystyle{10,20,40} \) <br><br>
+       <br>
+       (4) The third term \( \displaystyle{U_3 =ar^2 = -1} \cdots (1) \) <br><br>
+       The seventh term \( \displaystyle{U_7 = ar^6 = -81} \cdots (2) \) <br><br>
+       dividing (2) by (1) <br><br>
+       \( \displaystyle{r^4 =81} \) <br><br>
+       \( \displaystyle{\implies r^4 =3^4} \) <br><br>
+       \( \displaystyle{\implies r=3} \) <br><br>
+       Substituting \( 3 \) for \( r \) in (1) <br><br>
+       \( \displaystyle{ar^2 = -1 } \) <br><br>
+       \( \displaystyle{\implies 9a = -1} \) <br><br>
+       \( \displaystyle{\implies a= -{1 \over 9}} \) <br><br>
+       Now, the ninth term <br><br>
+       \( \displaystyle{U_9 = ar^8 = -{1 \over 9}(3)^8 = -729}  \) <br><br><br>
+       (5) the series \( \displaystyle{{1 \over 2}+{1 \over 3}+{2 \over 9}+ \cdots } \) <br><br>
+       the first term\( \displaystyle{a = {1 \over 2}}  \cdots (1) \) <br><br>
+       the second term \( \displaystyle{ar = {1 \over 3}} \cdots (2) \) <br><br>
+       dividing (2) by (1) <br><br>
+       \( \displaystyle{r = {1 \over 3} \cdot 2 } \) <br><br>
+       \( \displaystyle{r = {2 \over 3}} \) <br><br>
+       The sum of the first \( 8 \) terms <br><br>
+       \( \displaystyle{S_8 = \frac{a(1-r^n)}{1-r}} \) <br><br>
+       \( \displaystyle{\implies {\frac{{1 \over 2} \left[1- \left({ 2 \over 3}\right)^8 \right]}{1-{2 \over 3}}}} \) <br><br>
+       \( \displaystyle{\implies \frac{{1 \over 2} \left( 1 - \frac{256}{6561} \right) }{1-{2 \over 3}}} \) <br><br>
+       \( \displaystyle{\implies \left[ {1 \over 2 } \left( {\frac{6561-256}{6561}} \right)  \right] \div \left[ \frac{3-2}{3} \right] } \) <br><br>
+       \( \displaystyle{\implies {1 \over 2} \left[ \frac{6305}{6561} \right] \div {1 \over 3}} \)<br><br>
+       \( \displaystyle{\implies {\frac{6305}{13122} \times3 = \frac{6305}{4374}}} \) <br><br>
+          <br>
+  </p>
+  <br>
+  <p>
+    <u><b>Examples</b></u> <br><br>
+    (1) The first term of a geometric series is \( 3 \), the last term is \( 768 \). <br><br>
+    If the sum of the terms is \( 1533 \), <br><br>
+    find the common ratio and the number of terms. <br> <br>
+    (2) The sum of the first \( n \) terms of a geometric series <br><br>
+     is \( 127 \) and the sum of their reciprocals is \( \displaystyle{\frac{127}{64}} \). <br><br>
+    The first term is \( 1 \). Find \( n \) and the common ratio. <br><br>
+    <br>
+    <u><b>Solution</b></u><br><br>
+    (1) The first term \( \displaystyle{a = 3} \) <br><br>
+    The last term \( \displaystyle{U_n = 768} \) <br><br>
+    That is, \( \displaystyle{3r^{n-1} = 768} \cdots (1) \) <br><br>
+    Since the sum of the term is \( 1533 \), we have <br><br>
+    \( \displaystyle{S_n =1533 = \frac{3(r^n -1)}{r-1}} \) <br><br>
+    \( \displaystyle{\implies {1533(r-1) = 3(r^n -1)}} \) <br><br>
+    \( \displaystyle{\implies {1533r-1533 = 3r^n-3}} \) <br><br>
+    \( \displaystyle{\implies{3r^n -1533r+ 1530 =0}} \cdots (2) \) <br><br>
+    from (1) <br><br>
+    \( \displaystyle{3r^{n-1} =768} \) <br><br>
+    \( \displaystyle{\implies \frac{3r^n}{r}=768} \) <br><br>
+    \( \displaystyle{\implies {r^n = 256r}} \cdots (3) \) <br><br>
+    Substituting (3) into (2) <br><br>
+    \( \displaystyle{3r^n-1533r+1530 = 0} \) <br><br>
+    \( \displaystyle{\implies {3(256r)-1533r+1530 = 0}} \)<br><br>
+    \( \displaystyle{\implies {768r-1533r= -1530}} \) <br><br>
+    \( \displaystyle{\implies {-765r = - 1530}} \)<br><br>
+    \( \displaystyle{\implies r = \frac{1530}{765}} \) <br><br>
+    \( \displaystyle{\implies r=2} \) <br><br>
+    Substituting \( 2 \) for \( r \) in eqq(3) <br><br>
+    \( \displaystyle{2^n = 256(2)} \) <br><br>
+    \( \displaystyle{\implies 2^n = 512} \) <br><br>
+    \( \displaystyle{\implies 2^n = 2^9} \) <br><br>
+    \( \displaystyle{\implies n=9} \) <br><br>
+    \( \displaystyle{\therefore} \) the common ratio \( \displaystyle{r=2} \) <br><br>
+    the number of terms \( \displaystyle{n = 9} \) <br><br><br>
+    (2) Given that the sum of the G.P(the first \( n \) terms) is \( 127 \) and <br><br>
+     the first term \( \displaystyle{a=1} \) <br><br>
+     we have <br><br>
+     \( \displaystyle{S_n = \frac{a(r^n -1)}{r-1}} \) <br><br>
+     \( \displaystyle{\implies {\frac{r^n -1}{r-1} = 127}} \cdots (1) \) <br><br>
+     \( \displaystyle{\implies {r^n -1 = 127r- 127}} \) <br><br>
+     \( \displaystyle{\implies {r^n = 127r-126}} \cdots (2) \) <br><br>
+     Given that the sum of the reciprocal is \( \displaystyle{\frac{127}{64}} \), <br><br>
+     thefirst term is also \( 1 \) since the reciprocal of \( 1 \) is \(1 \). <br><br>
+     But now, the common ratio will be the reciprocal of \( r \), <br><br>
+     that is , common ratio \( \displaystyle{= {1 \over r}} \) <br><br>
+     So, <br><br>
+     \( \displaystyle{S_n = \frac{a(1-r^n)}{1-r}} \) , sincr \( \displaystyle{r < 1} \) <br><br>
+     \( \displaystyle{\implies {\frac{1-({1 \over r})^n}{1-{1 \over r}} = \frac{127}{64}}} \) <br><br>
+     \( \displaystyle{\implies {\frac{1- {\frac{1}{r^n}}}{1-{1 \over r}} = \frac{127}{64}}} \) <br><br>
+     \( \displaystyle{\implies {\frac{r^n-1}{r^n} \div \frac{r-1}{r} = \frac{127}{64}}} \) <br><br>
+     \( \displaystyle{\implies {\frac{r}{r^n}\left( {\frac{r^n-1}{r-1}}\right) = \frac{127}{64}}}  \cdots  \) (3) <br><br>
+     Recall from (1) that \( \displaystyle{\frac{r^n-1}{r-1} = 127} \) <br><br>
+     Substituting into eqq(3), we have <br><br>
+     \( \displaystyle{ 127{\frac{r}{r^n}} = \frac{127}{64}} \) <br><br>
+     dividing both sides by \( 127 \), we have <br><br>
+     \( \displaystyle{\frac{r}{r^n} = \frac{1}{64}} \) <br><br>
+     Taking the reciprocal on both sides <br><br>
+     \( \displaystyle{\frac{r^n}{r} = 64} \) <br><br>
+     \( \displaystyle{\implies r^n = 64r}  \cdots (4)\) <br><br>
+     Recall from eqq(2), \( \displaystyle{r^n = 127r-126} \) <br><br>
+     substituting into (4), we have <br><br>
+     \( \displaystyle{127r-126 = 64r} \) <br><br>
+     \( \displaystyle{\implies 127r-64r =126} \) <br><br>
+     \( \displaystyle{\implies63r = 126} \) <br><br>
+     \( \displaystyle{\implies r = \frac{126}{63} = 2} \) <br><br>
+     \( \displaystyle{\therefore} \) the common ratio \( \displaystyle{r = 2} \) <br> <br>
+     To find the value of \( n \), we substitute \( \displaystyle{r = 2} \) in eqq(2) <br><br>
+     \( \displaystyle{r^n = 127r-126} \) <br><br>
+     \( \displaystyle{\implies 2^n = 128} \) <br><br>
+     \( \displaystyle{\implies 2^n = 2^7} \) <br><br>
+     \( \displaystyle{\implies n = 7} \) <br><br>
+     \( \displaystyle{\therefore n=7, r=2} \) <br><br>
+  </p>
+  <br>
+  <p>
+    <h3><u>Infinite Geometric Series</u></h3>
+
+    <br><br>
+    The sum to infinity of a G.P canbe derived from the formula <br><br>
+    \( \displaystyle{S_n = \frac{a(1-r^n)}{1-r}} \) <br><br>
+    \( \displaystyle{\implies \frac{a-ar^n}{1-r}} \) <br><br>
+    \( \displaystyle{\implies \frac{a}{1-r} - \frac{ar^n}{1-r}} \) <br><br>
+    \( \displaystyle{\implies S_n = \frac{a}{1-r}- a \frac{r^n}{1-r}} \) <br><br>
+    As \( \displaystyle{n \to \infty , r^n \to 0} \) and therefore, wehave <br><br>
+    \( \displaystyle{S_{\infty} = \frac{a}{1-r} -0} \) <br><br>
+    \( \displaystyle{\implies S_{\infty} = \frac{a}{1-r}} \) (the sum to infinity) <br><br>
+    <br>
+    <u><b>Examples</b></u> <br><br>
+    Find the sum to infinity of the series <br><br>
+    (a) \( \displaystyle{{1 \over 5}+{1 \over {25}}+{1 \over {125}}+{1\over {625}}+ \cdots } \) <br><br>
+    (b) \( \displaystyle{{1 \over 6}+{{1\over 6}\left({5 \over 6}\right)^2}+{{1 \over 6}\left({5 \over 6}\right)^4}+ \cdots } \) <br><br>
+    <br>
+    <u><b>Solution</b></u> <br><br><br>
+    (a) \( \displaystyle{{1 \over 5}+{1 \over {25}}+{1 \over {125}}+{1\over {625}}+ \cdots } \) <br><br>
+     here, \( \displaystyle{a= {1 \over 5}} \cdots \) (1) <br><br>
+     also, \( \displaystyle{ar=\frac{1}{25}} \cdots \) (2) <br><br>
+     Dividing (2) by (1) <br><br>
+     \( \displaystyle{r = {1 \over {25}} \div {1 \over 5} = {1 \over 5}} \) <br><br>
+     \( \displaystyle{\therefore r= {1 \over 5}} \) <br><br>
+     The sum  to infinity <br><br>
+     \( \displaystyle{S_{\infty} = \frac{1 \over 5}{1 - {1 \over 5}}} \) <br><br>
+     \( \displaystyle{\implies \frac{1}{5} \div \frac{4}{5}} \) <br><br>
+     \( \displaystyle{\implies S_{\infty}= {1 \over 4}} \) <br><br><br>
+     (b) \( \displaystyle{{1 \over 6}+{{1\over 6}\left({5 \over 6}\right)^2}+{{1 \over 6}\left({5 \over 6}\right)^4}+ \cdots } \) <br><br>
+     here, \( \displaystyle{a = {1 \over 6}}  \cdots \) (1) <br><br>
+     also, \( \displaystyle{ar={1 \over 6}\left({5 \over 6}\right)^2}  \cdots \) (2) <br><br>
+     dividing (2) by (1) <br><br>
+     \( \displaystyle{r = {1 \over 6}\left({5 \over 6}\right)^2 \div {1 \over 6}} \) <br><br>
+     \( \displaystyle{\implies r = \left({5 \over 6}\right)^2} \) <br><br>
+     \( \displaystyle{\implies r= \frac{25}{36}} \) <br><br>
+     The sum to infinity <br><br>
+     \( \displaystyle{S_{\infty} = \frac{a}{1-r} = \frac{1 \over 6}{1-{\frac{25}{36}}}} \) <br><br>
+     \( \displaystyle{\implies {1 \over 6} \div \frac{11}{36}} \) <br><br>
+     \( \displaystyle{\implies {1 \over 6} \times {\frac{36}{11}}} \) <br><br>
+     \( \displaystyle{\implies S_{\infty} = \frac{6}{11}} \) <br><br>
+  </p>
+  <br>
+  <p>
+    <u><b>Exercises</b></u> <br><br><br>
+    (1) The sum of the squares of three positive numbers in Arithmetic Progression is \( 155 \).<br><br>
+    The sum of the numbers is \( 21 \). <br><br>
+    Find the numbers. <br><br>
+    (2) The sum of the first \( n \) terms of a geometric series is \( 364 \). <br><br>
+    The sum of their reciprocals is \( \displaystyle{\frac{364}{243}} \). <br><br>
+    If the first term is \( 1 \), find \( n \) and the common ratio. <br><br>
+    (3) If the tenth term of a geometric progression is \( 2 \) <br><br>
+    and the twentieth term is \( \displaystyle{\frac{1}{512}} \), find <br><br>
+    the first term, the common ratio, and the sum to infinity. <br><br>
+    (4) The \( nth \) term of a certain series is of the form <br><br>
+    \( \displaystyle{a+bn+c2^n} \), where \( \displaystyle{a, b, c} \) are constants. <br><br>
+    The first three terms are \( \displaystyle{2, -1, } \) and \( \displaystyle{-3} \) . <br><br>
+    Find \( \displaystyle{a,b,c} \) and the sum of the first \( n \) terms. <br><br>
+    (5) The sum to infinity of a G.P is \( S \).The sum to infinity of the squares of the terms is \( 2S \). <br><br>
+    The sum to infinity of the cubes is \( \displaystyle{\frac{56}{13}S} \). <br><br>
+    Find \( S \) and the first three terms of the original series. <br><br><br>
+  </p>
+  </body>
+</html>
